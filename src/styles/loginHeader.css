@@ -16,6 +16,12 @@ body {
     align-items: row;
     justify-content: end;
   }
+
+  .unilogo {
+    width: 375px;
+    position: relative;
+    right: 25px;
+  }
   
   /* Log In Button */
   .log-in-button {

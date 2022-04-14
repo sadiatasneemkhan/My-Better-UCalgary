@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import LoginHeader from './components/loginHeader';
 import Homepage from './pages/homepage';
 import './App.css';
+import Login from './pages/login';
 
 
 class App extends Component {
   render() { 
     return (
       <React.Fragment> 
-        <Homepage/>
+        <Login/>
         
       </React.Fragment>
     );

@@ -1,0 +1,115 @@
+.loginbox {
+    position: absolute;
+  
+    /* login fields are centered in the page */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    /* rounded login box */
+    width: 350px;
+    height: 420px;
+    background: rgb(233, 206, 85);
+    border-radius: 40px;
+  }
+  
+  /* login header*/
+  .loginbox h1 {
+    text-align: center;
+    padding: 35px 0 20px 0; /* top and bottom of LOGIN has padding */
+    color: white;
+  }
+  
+  /* login box elements except header*/
+  .loginbox form {
+    padding: 0 115px;
+    box-sizing: border-box;
+  }
+  
+  form .textfield {
+    position: relative;
+    margin: 30px 0;
+  }
+  
+  .loginbox input {
+    width: 150px;
+    height: 45px;
+  }
+  
+  .textfield input {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+  
+  .loginfield input {
+    font-size: 12px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+  }
+  
+  .center-block {
+    margin: auto;
+    display: block;
+  }
+  
+  /* Forgot password*/
+  .forgotpass {
+    margin: 20px 0 10px 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    text-align: left;
+  }
+  
+  .forgotpass:hover {
+    text-decoration: underline;
+  }
+  
+  /* Create an account */
+  .createacc {
+    margin: 20px 0 20px 0;
+    color: #ffffff;
+    font-size: 10px;
+    text-align: left;
+  }
+  
+  .createacc a {
+    color: #888787;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /*3 circle images within login box*/
+  .usericon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* rounds edges, 50% makes it a circle */
+    position: absolute;
+    top: 125px;
+    left: calc(50% - 130px);
+  }
+  
+  .passicon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* rounds edges, 50% makes it a circle */
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 130px);
+  }
+  
+  .loginicon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /*rounds edges, 50% makes it a circle*/
+    position: absolute;
+    top: 275px;
+    left: calc(50% - 130px);
+  }
+  

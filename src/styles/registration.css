@@ -6,13 +6,13 @@ h1 {
   }
   
   .button {
-    display: inline-block;
+    display: inline-flexbox;
     border-radius: 30px;
     border: none;
     outline: none;
     overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/
   
-    margin: 1rem 0;
+    margin: 1rem 700;
     padding: 2rem 3rem;
   
     font-family: "Helvetica", sans-serif;

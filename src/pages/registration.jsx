@@ -8,22 +8,22 @@ class Registration extends Component {
             <React.Fragment> 
                 <LoginHeader2/>
                 <h1>REGISTER AS</h1>
-                <div class="btn">
+                <div className="btn">
                 
                 <button
                     type="button"
-                    class="button margin-right student"
-                    onclick="window.location.href='studentregistration.html'"
+                    className="button margin-right student"
+                    onClick={event =>  window.location.href='../pages/studentRegistration.jsx'}
                 >
-                    <span class="buttontext">STUDENT</span>
+                    <span className="buttontext">STUDENT</span>
                 </button>
                 
                 <button
                     type="button"
-                    class="button admin"
-                    onclick="window.location.href='adminregistration.html'"
+                    className="button admin"
+                    onClick={event =>  window.location.href='../pages/adminRegistration.jsx'}
                 >
-                    <span class="buttontext">ADMIN</span>
+                    <span className="buttontext">ADMIN</span>
                 </button>
                 </div>
             </React.Fragment>

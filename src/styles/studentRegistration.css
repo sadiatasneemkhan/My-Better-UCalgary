@@ -46,6 +46,9 @@
   
   .button input {
     position: relative;
+    top: -30px;
+    font-size: smaller;
+    font-family:sans-serif;
     border: none;
     outline: none;
     border-radius: 10px;

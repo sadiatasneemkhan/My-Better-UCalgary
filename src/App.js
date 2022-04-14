@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import AdminRegistration from './pages/adminRegistration';
 import Homepage from './pages/homepage';
 import Login from './pages/login';
 import Registration from './pages/registration';
@@ -10,7 +11,7 @@ class App extends Component {
   render() { 
     return (
       <React.Fragment> 
-        <Registration/>
+        <AdminRegistration/>
         
       </React.Fragment>
     );

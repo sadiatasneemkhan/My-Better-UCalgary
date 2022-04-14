@@ -9,7 +9,7 @@ class LoginHeader extends Component {
                 <div className="login">
                     <button
                     className="log-in-button"
-                    onclick="window.location.href='pages/login.html'"
+                    onClick={event =>  window.location.href='../pages/login.jsx'}
                     >
                     LOGIN
                     </button>

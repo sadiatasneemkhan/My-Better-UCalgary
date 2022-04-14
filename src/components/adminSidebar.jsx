@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/sidebar.css'
 
-function Sidebar () {
+function AdminSidebar () {
     return (  
         <React.Fragment>
             <div class="sidebar">
@@ -18,4 +18,4 @@ function Sidebar () {
     );
 }
 
-export default Sidebar ;
+export default AdminSidebar ;

@@ -5,9 +5,9 @@ export default function LoginHeader2 (props) {
     return (
         <React.Fragment>
             <div className="header">
-            <div className="login">
+            <div className="action">
                 <button
-                className="log-in-button"
+                className="action-button"
                 onClick={event =>  window.location.href='../pages/login.jsx'}
                 >
                 LOGIN

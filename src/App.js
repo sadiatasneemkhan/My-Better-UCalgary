@@ -11,7 +11,7 @@ class App extends Component {
   render() { 
     return (
       <React.Fragment> 
-        <AdminRegistration/>
+        <StudentRegistration/>
         
       </React.Fragment>
     );

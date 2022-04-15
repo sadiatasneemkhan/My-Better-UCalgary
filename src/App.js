@@ -7,6 +7,8 @@ import Login from './pages/login';
 import Registration from './pages/registration';
 import StudentRegistration from './pages/studentRegistration';
 import AdminRegistration from './pages/adminRegistration';
+import AdminDashboard from './components/adminDashboard';
+import StudentDashboard from './components/studentDashboard';
 
 export default function App (){
 
@@ -14,13 +16,16 @@ export default function App (){
     <Router>
       <Switch>
         <Route path="/" exact component={Homepage}/>
+
         <Route path="/login" exact component={Login}/>
         <Route path="/registration" exact component={Registration}/>
+
         <Route path="/studentRegistration" exact component={StudentRegistration}/>
         <Route path="/adminRegistration" exact component={AdminRegistration}/>
         
-        <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Homepage}/>
+        <Route path="/studentDashboard" exact component={StudentDashboard}/>
+        <Route path="/adminDashboard" exact component={AdminDashboard}/>
+
         <Route path="/login" exact component={Login}/>
         <Route path="/" exact component={Homepage}/>
         <Route path="/login" exact component={Login}/>

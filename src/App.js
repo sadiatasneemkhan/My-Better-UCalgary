@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import DropCourse from './pages/dropCourse';
 //import Calculator from './pages/calculator';
-import EnrollCourse from './pages/enrollCourse';
+//import EnrollCourse from './pages/enrollCourse';
 //import AddGrade from './pages/addGrade';
 //import Transcript from './pages/transcript';
 //import AddCourse from './pages/addCourse';
@@ -23,7 +24,7 @@ export default function App (){
 
   return (
     <React.Fragment> 
-      <EnrollCourse/>
+      <DropCourse/>
     </React.Fragment>
   );
 }

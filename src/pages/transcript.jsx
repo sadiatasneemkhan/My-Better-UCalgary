@@ -1,11 +1,11 @@
 import React from "react";
-import AdminDashboard from '../components/adminDashboard';
+import StudentDashboard from '../components/studentDashboard';
 import '../styles/transcript.css'
 
 function Transcript() {
     return (  
         <React.Fragment>
-            <AdminDashboard/>
+            <StudentDashboard/>
 
             <div className="course-details">
             <h1>TRANSCRIPT</h1>

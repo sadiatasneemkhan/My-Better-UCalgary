@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Calculator from './pages/calculator';
+//import Calculator from './pages/calculator';
+import EnrollCourse from './pages/enrollCourse';
 //import AddGrade from './pages/addGrade';
 //import Transcript from './pages/transcript';
 //import AddCourse from './pages/addCourse';
@@ -22,7 +23,7 @@ export default function App (){
 
   return (
     <React.Fragment> 
-      <Calculator/>
+      <EnrollCourse/>
     </React.Fragment>
   );
 }

@@ -1,14 +1,12 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const app = express();
-const port = 5000;
+const port = 5002;
 const CourseAPI = require('./API/course');
 const StudentAPI = require('./API/student');
 //const ScheduleAPI = require('./API/schedule');
 const AdminAPI = require('./API/admin');
 
 // useful for parsing JSONs 
-app.use(bodyParser.json());
 const cors = require("cors");
 const corsOptions ={
    origin:'*', 
@@ -26,7 +24,6 @@ app.use('/admin',AdminAPI);
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}
 
 app.listen(port, () => {
-
 console.log(`server started on ${port}`);
 });
 

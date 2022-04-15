@@ -1,6 +1,6 @@
 import React from "react";
 import AdminDashboard from '../components/adminDashboard';
-import '../styles/updateCourse.css'
+import uc from  '../styles/updateCourse.module.css'
 
 function UpdateCourse() {
     return (  
@@ -9,27 +9,27 @@ function UpdateCourse() {
 
             <h1>UPDATE COURSE</h1>
 
-            <div class="btn">
+            <div className={uc.btn}>
             <button
                 type="button"
-                class="button margin-right add"
+                className={`${uc.button} ${uc.margin-right} ${uc.add}`}
                 onclick="window.location.href='addcourse.html'"
             >
-                <span class="buttontext">ADD</span>
+                <span className={uc.buttontext}>ADD</span>
             </button>
             <button
                 type="button"
-                class="button margin-right edit"
+                className={`${uc.button} ${uc.margin-right} ${uc.edit}`}
                 onclick="window.location.href='editcourse.html'"
             >
-                <span class="buttontext">EDIT</span>
+                <span className={uc.buttontext}>EDIT</span>
             </button>
             <button
                 type="button"
-                class="button remove"
+                className={`$${uc.button} ${uc.remove}`}
                 onclick="window.location.href='removecourse.html'"
             >
-                <span class="buttontext">REMOVE</span>
+                <span className={uc.buttontext}>REMOVE</span>
             </button>
             </div>
         </React.Fragment>

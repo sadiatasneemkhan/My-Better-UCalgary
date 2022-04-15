@@ -1,29 +1,29 @@
 import React from "react";
 import StudentDashboard from '../components/studentDashboard';
-import '../styles/enrollCourse.css'
+import erc from '../styles/enrollCourse.module.css'
 
 function EnrollCourse() {
     return (  
         <React.Fragment>
             <StudentDashboard/>
 
-            <div class="course-details">
+            <div className={erc.course-details}>
             <h1>ENROLL INTO COURSE</h1>
 
             <form method="post">
-                <div class="labels">
+                <div className={erc.labels}>
                 <label>Choose the course you wish to enroll into:</label>
                 </div>
-                <div class="textfield">
+                <div className={erc.textfield}>
                 <input
-                    class="center-block"
+                    className={erc.center-block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
                 />
                 </div>
-                <div class="button">
-                <input class="center-block" type="submit" value="Save" />
+                <div className={erc.button}>
+                <input className={erc.center-block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

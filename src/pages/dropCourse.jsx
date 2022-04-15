@@ -1,31 +1,31 @@
 import React from "react";
 import StudentDashboard from '../components/studentDashboard';
-import '../styles/dropCourse.css'
+import dc from '../styles/dropCourse.module.css'
 
 function DropCourse() {
     return (  
         <React.Fragment>
             <StudentDashboard/>
 
-            <div class="course-details">
+            <div className={dc.course-details}>
             <h1>DROP COURSE</h1>
 
             <form method="post">
-                <div class="labels">
+                <div className={dc.labels}>
                 <label>Choose the course you wish to drop:</label>
                 </div>
-                <div class="textfield">
+                <div className={dc.textfield}>
               
                 <input
-                    class="center-block"
+                    className={dc.center-block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
                 />
                 </div>
   
-                <div class="button">
-                <input class="center-block" type="submit" value="Save" />
+                <div className={dc.button}>
+                <input className={dc.center-block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

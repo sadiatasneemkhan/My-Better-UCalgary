@@ -1,72 +1,72 @@
 import React from "react";
 import AdminDashboard from '../components/adminDashboard';
-import '../styles/addGrade.css'
+import ag from '../styles/addGrade.module.css'
 
 function AddGrade() {
     return (  
         <React.Fragment>
             <AdminDashboard/>
 
-            <div class="grade-details">
+            <div className={ag.grade-details}>
             <h1>ADD GRADE</h1>
 
             <form method="post">
-                <div class="labels">
+                <div className={ag.labels}>
                 <label>Student's UCID</label>
                 </div>
-                <div class="textfield">
-                <input class="center-block" type="text" placeholder="UCID" required />
+                <div className={ag.textfield}>
+                <input className={ag.center-block} type="text" placeholder="UCID" required />
                 </div>
-                <div class="labels">
+                <div className={ag.labels}>
                 <label>Course Name</label>
                 </div>
-                <div class="textfield">
+                <div className={ag.textfield}>
                 <input
-                    class="center-block"
+                    className={ag.center-block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
                 />
                 </div>
 
-                <div class="labels">
+                <div className={ag.labels}>
                 <label>Course Semester</label>
                 </div>
-                <div class="textfield">
+                <div className={ag.textfield}>
                 <input
-                    class="center-block"
+                    className={ag.center-block}
                     type="text"
                     placeholder="Ex. Winter 2022"
                     required
                 />
                 </div>
 
-                <div class="labels">
+                <div className={ag.labels}>
                 <label>Percentage Grade (%)</label>
                 </div>
-                <div class="textfield">
+                <div className={ag.textfield}>
                 <input
-                    class="center-block"
+                    className={ag.center-block}
                     type="text"
                     placeholder="Ex. 97"
                     required
                 />
                 </div>
 
-                <div class="labels">
+                <div className={ag.labels}>
                 <label>Letter Grade</label>
                 </div>
-                <div class="textfield">
+                <div className={ag.textfield}>
                 <input
-                    class="center-block"
+                    className={ag.center-block}
                     type="text"
                     placeholder="Ex. A+"
                     required
                 />
                 </div>
 
-                <div class="button">
-                <input class="center-block" type="submit" value="Save" />
+                <div className={ag.button}>
+                <input className={ag.center-block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

@@ -1,0 +1,80 @@
+.lists{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-container{
+  background: rgb(194, 190, 172);
+  height: 400;
+  width: 40%;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons{
+  max-height: 30px;
+  margin-bottom: 10px;
+}
+
+.course-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* rounded box */
+  width: 500px;
+  height: 500px;
+  background: #e74747;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-details h1 {
+  text-align: center;
+  position: relative;
+  top: -40px;
+  padding: 0 0 20px 0;
+  color: white;
+}
+
+.work{
+    margin-right: 104px;
+}
+
+/* Percentages*/
+li {
+    color: var(--u-c-yellow); 
+    margin: 5px 5px 5px 5px;
+}
+
+li input:nth-last-child(2){
+    width:100px;
+}
+
+li input:nth-child(even){
+    width:90px;
+}
+
+@media screen and (max-width: 1200px) {
+    img {
+        max-width: 100%;
+    }
+    .logo {
+        height: 100px;
+    }
+    p {
+        font-size: 30px;
+    }
+    li input:nth-child(even){
+        width:30px;
+    }
+
+    li input:nth-child(odd){
+        width:30px;
+    }
+}

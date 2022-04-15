@@ -13,7 +13,7 @@ export default function App (){
       <Switch>
         <Route path="/" exact component={Homepage}/>
         <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Registration}/>
+        <Route path="/registration" exact component={Registration}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/" exact component={Homepage}/>
         <Route path="/login" exact component={Login}/>

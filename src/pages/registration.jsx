@@ -12,7 +12,7 @@ export default function Registration (props) {
             
             <button
                 type="button"
-                className={`${r.button} ${r.margin-right} ${r.student}`}
+                className={`${r.button} ${r.margin_right} ${r.student}`}
                 onClick={event =>  window.location.href='../pages/studentRegistration.jsx'}
             >
                 <span className={r.buttontext}>STUDENT</span>

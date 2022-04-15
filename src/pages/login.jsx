@@ -29,7 +29,7 @@ export default function Login (props) {
 
                     <div className={l.forgotpass}>Forgot password?</div>
                     <div className={l.createacc}>
-                    Not registered yet? <a href="registration.html">Create an account </a>
+                    Not registered yet? <a href="registration">Create an account </a>
                     </div>
                 </form>
 

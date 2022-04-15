@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import UpdateCourse from './pages/updateCourse';
+import AddCourse from './pages/addCourse';
+//import UpdateCourse from './pages/updateCourse';
 //import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 //import Homepage from './pages/homepage';
@@ -15,7 +16,7 @@ export default function App (){
 
   return (
     <React.Fragment> 
-      <UpdateCourse/>
+      <AddCourse/>
     </React.Fragment>
   );
 }

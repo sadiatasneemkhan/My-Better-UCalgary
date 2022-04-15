@@ -7,7 +7,7 @@ export default function LoginHeader2 (props) {
             <div className={lh2.header}>
             <div className={lh2.action}>
                 <button
-                className={lh2.action-button}
+                className={lh2.action_button}
                 onClick={event =>  window.location.href='../pages/login.jsx'}
                 >
                 LOGIN

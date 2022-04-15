@@ -15,29 +15,29 @@ export default function AdminRegistration (props) {
                         <label>Full Name</label>
                     </div>
                     <div className={ar.textfield}>
-                        <input className={ar.center-block} type="text" placeholder="First Name" required />
-                        <input className={ar.center-block} type="text" placeholder="Last Name" required />
+                        <input className={ar.center_block} type="text" placeholder="First Name" required />
+                        <input className={ar.center_block} type="text" placeholder="Last Name" required />
                     </div>
 
                     <div className={ar.labels}>
                         <label>Date Joined</label>
                     </div>
                     <div className={ar.textfield}>
-                    <input className={ar.center-block} type="text" placeholder="DD/MM/YYYY" required />
+                    <input className={ar.center_block} type="text" placeholder="DD/MM/YYYY" required />
                     </div>
 
                     <div className={ar.labels}>
                         <label>Account Info</label>
                     </div>
                     <div className={ar.textfield}>
-                    <input className={ar.center-block} type="text" placeholder="UCID" required />
-                    <input className={ar.center-block} type="text" placeholder="Department" required />
-                    <input className={ar.center-block} type="text" placeholder="Password" required />
-                    <input className={ar.center-block} type="text" placeholder="Confirm Password" required />
+                    <input className={ar.center_block} type="text" placeholder="UCID" required />
+                    <input className={ar.center_block} type="text" placeholder="Department" required />
+                    <input className={ar.center_block} type="text" placeholder="Password" required />
+                    <input className={ar.center_block} type="text" placeholder="Confirm Password" required />
                     </div>
 
                     <div className={ar.button}>
-                        <input className={ar.center-block} type="submit" value="Register" />
+                        <input className={ar.center_block} type="submit" value="Register" />
                     </div>
                     
                 </form>

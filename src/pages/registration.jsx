@@ -13,7 +13,7 @@ export default function Registration (props) {
             <button
                 type="button"
                 className={`${r.button} ${r.margin_right} ${r.student}`}
-                onClick={event =>  window.location.href='../pages/studentRegistration.jsx'}
+                onClick={event =>  window.location.href='/studentRegistration'}
             >
                 <span className={r.buttontext}>STUDENT</span>
             </button>
@@ -21,7 +21,7 @@ export default function Registration (props) {
             <button
                 type="button"
                 className={`${r.button} ${r.admin}`}
-                onClick={event =>  window.location.href='../pages/adminRegistration.jsx'}
+                onClick={event =>  window.location.href='/adminRegistration'}
             >
                 <span className={r.buttontext}>ADMIN</span>
             </button>

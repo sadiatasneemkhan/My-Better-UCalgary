@@ -25,4 +25,9 @@
     margin: 40px;
     text-align: left;
   }
-  
+
+  @media screen and (max-width: 690px){
+    .sidebar{
+        width: 120px;
+    }     
+}

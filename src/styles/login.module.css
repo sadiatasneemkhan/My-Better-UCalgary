@@ -91,7 +91,7 @@
     height: 40px;
     border-radius: 50%; /* rounds edges, 50% makes it a circle */
     position: absolute;
-    top: 125px;
+    top: 135px;
     left: calc(50% - 130px);
   }
   
@@ -100,7 +100,7 @@
     height: 40px;
     border-radius: 50%; /* rounds edges, 50% makes it a circle */
     position: absolute;
-    top: 200px;
+    top: 208px;
     left: calc(50% - 130px);
   }
   
@@ -109,7 +109,7 @@
     height: 40px;
     border-radius: 50%; /*rounds edges, 50% makes it a circle*/
     position: absolute;
-    top: 275px;
+    top: 286px;
     left: calc(50% - 130px);
   }
   

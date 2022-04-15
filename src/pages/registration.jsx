@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoginHeader2 from '../components/loginHeader2';
-import '../styles/registration.css'
+import r from '../styles/registration.module.css'
 
 export default function Registration (props) {
    
@@ -8,22 +8,22 @@ export default function Registration (props) {
         <React.Fragment> 
             <LoginHeader2/>
             <h1>REGISTER AS</h1>
-            <div className="btn">
+            <div className={r.btn}>
             
             <button
                 type="button"
-                className="button margin-right student"
+                className={`${r.button} ${r.margin-right} ${r.student}`}
                 onClick={event =>  window.location.href='../pages/studentRegistration.jsx'}
             >
-                <span className="buttontext">STUDENT</span>
+                <span className={r.buttontext}>STUDENT</span>
             </button>
             
             <button
                 type="button"
-                className="button admin"
+                className={`${r.button} ${r.admin}`}
                 onClick={event =>  window.location.href='../pages/adminRegistration.jsx'}
             >
-                <span className="buttontext">ADMIN</span>
+                <span className={r.buttontext}>ADMIN</span>
             </button>
             </div>
         </React.Fragment>

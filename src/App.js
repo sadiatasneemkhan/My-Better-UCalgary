@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
-import './App.css';
-import AdminRegistration from './pages/adminRegistration';
-import Homepage from './pages/homepage';
-import Login from './pages/login';
-import Registration from './pages/registration';
-import StudentRegistration from './pages/studentRegistration';
 
+//import Homepage from './pages/homepage';
+//import Login from './pages/login';
+//import Registration from './pages/registration';
+//import StudentRegistration from './pages/studentRegistration';
+//import AdminRegistration from './pages/adminRegistration';
+//import AdminDashboard from './components/adminDashboard';
+import StudentDashboard from './components/studentDashboard';
 
-class App extends Component {
-  render() { 
-    return (
-      <React.Fragment> 
-        <StudentRegistration/>
-        
-      </React.Fragment>
-    );
-  }
+export default function App (){
+
+  return (
+    <React.Fragment> 
+      <StudentDashboard/>
+    </React.Fragment>
+  );
 }
  
-export default App;

@@ -23,8 +23,7 @@ body {
     right: 25px;
   }
   
-  /* Log In Button */
-  .log-in-button {
+  .action-button {
     background: none;
     border: none;
     outline: none;
@@ -32,6 +31,6 @@ body {
     font-weight: 500;
     color: white;
   }
-  .log-in-button:hover {
+  .action-button:hover {
     font-weight: 700;
   }

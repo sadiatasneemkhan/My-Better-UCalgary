@@ -1,17 +1,21 @@
 import React, {Component} from 'react';
 import '../styles/loginHeader.css'
 
-export default function LoginHeader (props) {
+export default function SignOutHeader (props) { 
     return (
-        <div className="header">
+        <React.Fragment>
+            <div className="header">
             <div className="action">
                 <button
                 className="action-button"
                 onClick={event =>  window.location.href='../pages/login.jsx'}
                 >
-                LOGIN
+                SIGN OUT
                 </button>
             </div>
         </div>
+        <img src="../images/logo.png" class="unilogo" />
+        </React.Fragment>
+        
     );
 }

@@ -4,14 +4,14 @@ import '../styles/sidebar.css'
 function AdminSidebar () {
     return (  
         <React.Fragment>
-            <div class="sidebar">
-                <span class="left-jus">DASHBOARD</span>
+            <div className="sidebar">
+                <span className="left-jus">DASHBOARD</span>
 
-                <div class="menuoptions">
-                    <a class="left-jus" href="courselist.html">Course List</a>
-                    <a class="left-jus" href="updatecourse.html">Update Course</a>
-                    <a class="left-jus" href="viewgrade.html">View Student's Grade</a>
-                    <a class="left-jus" href="addgrade.html">Add Student's Grade</a>
+                <div className="menuoptions">
+                    <a className="left-jus" href="courselist.html">Course List</a>
+                    <a className="left-jus" href="updatecourse.html">Update Course</a>
+                    <a className="left-jus" href="viewgrade.html">View Student's Grade</a>
+                    <a className="left-jus" href="addgrade.html">Add Student's Grade</a>
                 </div>
             </div>
         </React.Fragment>

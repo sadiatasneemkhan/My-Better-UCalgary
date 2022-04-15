@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 //import AddCourse from './pages/addCourse';
 //import EditCourse from './pages/editCourse';
 import RemoveCourse from './pages/removeCourse';
+import ViewGrade from './pages/viewGrade';
 //import UpdateCourse from './pages/updateCourse';
 //import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
@@ -18,7 +19,7 @@ export default function App (){
 
   return (
     <React.Fragment> 
-      <RemoveCourse/>
+      <ViewGrade/>
     </React.Fragment>
   );
 }

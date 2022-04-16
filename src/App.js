@@ -38,21 +38,21 @@ export default function App (){
         <Route path="/studentDashboard" exact component={StudentDashboard}/>
         <Route path="/adminDashboard" exact component={AdminDashboard}/>
 
-        <Route path="/viewCourse" exact component={ViewCourses}/>
-        <Route path="/updateCourse" exact component={UpdateCourse}/>
-        <Route path="/addCourse" exact component={AddCourse}/>
-        <Route path="/editCourse" exact component={EditCourse}/>
-        <Route path="/removeCourse" exact component={RemoveCourse}/>
+        <Route path="/adminDashboard/viewCourse" exact component={ViewCourses}/>
+        <Route path="/adminDashboard/updateCourse" exact component={UpdateCourse}/>
+        <Route path="/adminDashboard/addCourse" exact component={AddCourse}/>
+        <Route path="/adminDashboard/editCourse" exact component={EditCourse}/>
+        <Route path="/adminDashboard/removeCourse" exact component={RemoveCourse}/>
 
-        <Route path="/viewGrade" exact component={ViewGrade}/>
-        <Route path="/addGrade" exact component={AddGrade}/>
+        <Route path="/adminDashboard/viewGrade" exact component={ViewGrade}/>
+        <Route path="/adminDashboard/addGrade" exact component={AddGrade}/>
         
-        <Route path="/transcript" exact component={Transcript}/>
-        <Route path="/calculator" exact component={Calculator}/>
+        <Route path="/studentDashboard/transcript" exact component={Transcript}/>
+        <Route path="/studentDashboard/calculator" exact component={Calculator}/>
         
-        <Route path="/enrollCourse" exact component={EnrollCourse}/>
-        <Route path="/dropCourse" exact component={DropCourse}/>
-        <Route path="/degreeTracker" exact component={DegreeTracker}/>
+        <Route path="/studentDashboard/enrollCourse" exact component={EnrollCourse}/>
+        <Route path="/studentDashboard/dropCourse" exact component={DropCourse}/>
+        <Route path="/studentDashboard/degreeTracker" exact component={DegreeTracker}/>
 
         <Route path="*" exact component={PageNotFound}/>
       </Switch>

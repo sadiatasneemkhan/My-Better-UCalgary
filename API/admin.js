@@ -29,6 +29,15 @@ let test = false;
   });
 });
 
+router.get('/studentTid',(req,res) =>{
+  let sUCID = req.query.Sid;
+  let query = `SELECT TRANSCRIPT.T_ID FROM (TRANSCRIPT JOIN STUDENT ON TRANSCRIPT.S_UCID = STUDENT.UCID) 
+  WHERE UCID = ${sUCID}`;
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    else return res.json(result);
+  }); 
+});
 
 router.get("/getadmins", (req, res) => {
   let query = `SELECT * FROM ACCOUNT`;
@@ -37,5 +46,27 @@ router.get("/getadmins", (req, res) => {
     else return res.json(result);
   });
 });
+
+router.post('/addGrade',(req,res) => {
+  let sysUCID = req.query.Adminid;
+let sUCID = req.query.Sid;
+let course = req.query.Course_name;
+let Course_sem = req.query.Sem;
+let letter = req.query.Lgrade;
+let percent = req.query.Pgrade;
+let t_id = req.query.t_id;
+
+
+
+let query = `INSERT INTO GRADE
+VALUES
+(${sUCID}, '${course}', '${Course_sem}',${percent}, '${letter}', ${t_id}, ${sysUCID})`
+
+db.query(query, (err) => {
+  if (err) throw err;
+  else return res.send({'UCID': sysUCID});
+});
+});
+
 
 module.exports = router;

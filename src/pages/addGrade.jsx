@@ -7,7 +7,7 @@ function AddGrade() {
         <React.Fragment>
             <AdminDashboard/>
 
-            <div className={ag.grade-details}>
+            <div className={ag.grade_details}>
             <h1>ADD GRADE</h1>
 
             <form method="post">
@@ -15,14 +15,14 @@ function AddGrade() {
                 <label>Student's UCID</label>
                 </div>
                 <div className={ag.textfield}>
-                <input className={ag.center-block} type="text" placeholder="UCID" required />
+                <input className={ag.center_block} type="text" placeholder="UCID" required />
                 </div>
                 <div className={ag.labels}>
                 <label>Course Name</label>
                 </div>
                 <div className={ag.textfield}>
                 <input
-                    className={ag.center-block}
+                    className={ag.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
@@ -34,7 +34,7 @@ function AddGrade() {
                 </div>
                 <div className={ag.textfield}>
                 <input
-                    className={ag.center-block}
+                    className={ag.center_block}
                     type="text"
                     placeholder="Ex. Winter 2022"
                     required
@@ -46,7 +46,7 @@ function AddGrade() {
                 </div>
                 <div className={ag.textfield}>
                 <input
-                    className={ag.center-block}
+                    className={ag.center_block}
                     type="text"
                     placeholder="Ex. 97"
                     required
@@ -58,7 +58,7 @@ function AddGrade() {
                 </div>
                 <div className={ag.textfield}>
                 <input
-                    className={ag.center-block}
+                    className={ag.center_block}
                     type="text"
                     placeholder="Ex. A+"
                     required
@@ -66,7 +66,7 @@ function AddGrade() {
                 </div>
 
                 <div className={ag.button}>
-                <input className={ag.center-block} type="submit" value="Save" />
+                <input className={ag.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

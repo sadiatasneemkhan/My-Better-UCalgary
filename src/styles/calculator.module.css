@@ -18,7 +18,7 @@
   margin-bottom: 10px;
 }
 
-.course-details {
+.course_details {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,7 +34,7 @@
   justify-content: center;
 }
 
-.course-details h1 {
+.course_details h1 {
   text-align: center;
   position: relative;
   top: -40px;

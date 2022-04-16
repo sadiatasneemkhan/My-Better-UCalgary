@@ -1,4 +1,4 @@
-.course-details {
+.course_details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  .course-details h1 {
+  .course_details h1 {
     text-align: center;
     padding: 10px 0 60px 0;
     position: relative;
@@ -21,7 +21,7 @@
     color: white;
   }
   
-  .course-details table{
+  .course_details table{
     position: absolute;
     left: 50%;
     top: 50%;

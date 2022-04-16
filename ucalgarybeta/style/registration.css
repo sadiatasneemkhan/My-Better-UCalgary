@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Helvetica", sans-serif;
+}
+
+/* Page Template */
+.header {
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, white, #ffcf06, #f83f3f);
+}
+
+.unilogo {
+  width: 375px;
+  position: relative;
+  right: 25px;
+}
+
+/* Register As */
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  padding: 15px 0 20px 0;
+  color: black;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/
+
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.student {
+  background: #f8b73f;
+}
+
+.student:hover {
+  background: #ee9b00;
+}
+
+.admin {
+  background: #e74747;
+}
+
+.admin:hover {
+  background: #e22222;
+}
+
+.buttontext {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+button.margin-right {
+  margin-right: 60px;
+}

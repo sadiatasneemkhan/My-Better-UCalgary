@@ -15,9 +15,11 @@ router.get("/checkLogin", (req, res) => {
     if (err) throw err;
 
     if (result.length == 0) {
-      res.send({ validity: false });
+        if(ucid.charAt(0) ==1)
+      res.send({ account: 'Admin' });
+      else res.send({ account: 'Student' });
     } else {
-      res.send({ validity: true });
+      res.send({ account: 'ERROR' });
     }
   });
 });

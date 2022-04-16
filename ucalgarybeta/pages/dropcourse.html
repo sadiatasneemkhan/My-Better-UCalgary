@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Drop Course</title>
+    <link rel="stylesheet" type="text/css" href="../style/dropcourse.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <!-- Sign Out-->
+      <div class="signout">
+        <button
+          class="sign-out-button"
+          onclick="window.location.href='../index.html'"
+        >
+          SIGN OUT
+        </button>
+      </div>
+    </div>
+
+    <img src="../images/logo.png" class="unilogo" />
+
+    <div class="sidebar">
+      <span class="left-jus">DASHBOARD</span>
+
+      <!-- Dashboard Menu Options-->
+      <div class="menuoptions">
+        <a class="left-jus" href="transcript.html">Transcript</a>
+        <a class="left-jus" href="calculator.html">Grade Calculator</a>
+        <a class="left-jus" href="schedule.html">Schedule</a>
+        <a class="left-jus" href="enrollcourse.html">Enroll into a Course</a>
+        <a class="left-jus" href="dropcourse.html">Drop a Course</a>
+        <a class="left-jus" href="degreetracker.html">Degree Tracker</a>
+      </div>
+    </div>
+
+    <div class="course-details">
+      <h1>DROP COURSE</h1>
+
+      <form method="post">
+        <div class="labels">
+          <label>Choose the course you wish to drop:</label>
+        </div>
+        <div class="textfield">
+          <!--Course chosen -->
+          <input
+            class="center-block"
+            type="text"
+            placeholder="Ex. CPSC 471"
+            required
+          />
+        </div>
+        <!-- Save submission button -->
+        <div class="button">
+          <input class="center-block" type="submit" value="Save" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-.grade-details {
+.grade_details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -12,13 +12,13 @@
   }
   
   /* header*/
-  .grade-details h1 {
+  .grade_details h1 {
     text-align: center;
     padding: 30px 0 20px 0;
     color: white;
   }
   
-  .grade-details form {
+  .grade_details form {
     padding: 0 40px;
     box-sizing: border-box;
   }
@@ -38,7 +38,7 @@
     border-radius: 5px;
   }
   
-  .center-block {
+  .center_block {
     margin: auto;
     margin-top: 2px;
     display: block;

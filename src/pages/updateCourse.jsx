@@ -12,14 +12,14 @@ function UpdateCourse() {
             <div className={uc.btn}>
             <button
                 type="button"
-                className={`${uc.button} ${uc.margin-right} ${uc.add}`}
+                className={`${uc.button} ${uc.margin_right} ${uc.add}`}
                 onclick="window.location.href='addcourse.html'"
             >
                 <span className={uc.buttontext}>ADD</span>
             </button>
             <button
                 type="button"
-                className={`${uc.button} ${uc.margin-right} ${uc.edit}`}
+                className={`${uc.button} ${uc.margin_right} ${uc.edit}`}
                 onclick="window.location.href='editcourse.html'"
             >
                 <span className={uc.buttontext}>EDIT</span>

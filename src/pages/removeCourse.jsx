@@ -7,7 +7,7 @@ function RemoveCourse() {
         <React.Fragment>
             <AdminDashboard/>
 
-            <div className={rc.course-details}>
+            <div className={rc.course_details}>
             <h1>REMOVE COURSE</h1>
 
             <form method="post">
@@ -17,7 +17,7 @@ function RemoveCourse() {
                 <div className={rc.textfield}>
                     
                 <input
-                    className={rc.center-block}
+                    className={rc.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
@@ -25,7 +25,7 @@ function RemoveCourse() {
                 </div>
                 
                 <div className={rc.button}>
-                <input className={rc.center-block} type="submit" value="Save" />
+                <input className={rc.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

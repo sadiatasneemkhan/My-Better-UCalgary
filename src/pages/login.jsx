@@ -11,12 +11,12 @@ export default function Login (props) {
                 
                 <form method="post">
                     <div className={l.textfield}>
-                    <input className={l.center-block} type="text" placeholder="UCID" required />
+                    <input className={l.center_block} type="text" placeholder="UCID" required />
                     </div>
 
                     <div className={l.textfield}>
                     <input
-                        className={l.center-block}
+                        className={l.center_block}
                         type="password"
                         placeholder="Password"
                         required
@@ -24,12 +24,12 @@ export default function Login (props) {
                     </div>
 
                     <div className={l.loginfield}>
-                    <input className={l.center-block} type="submit" value="Login" />
+                    <input className={l.center_block} type="submit" value="Login" />
                     </div>
 
                     <div className={l.forgotpass}>Forgot password?</div>
                     <div className={l.createacc}>
-                    Not registered yet? <a href="registration.html">Create an account </a>
+                    Not registered yet? <a href="registration">Create an account </a>
                     </div>
                 </form>
 

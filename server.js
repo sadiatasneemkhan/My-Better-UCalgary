@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
-const port = 5002;
+const port = 5000;
 const CourseAPI = require('./API/course');
 const StudentAPI = require('./API/student');
-//const ScheduleAPI = require('./API/schedule');
+const ScheduleAPI = require('./API/schedule');
 const AdminAPI = require('./API/admin');
 
 // useful for parsing JSONs 
@@ -18,7 +18,7 @@ app.use(cors(corsOptions));
 
 app.use('/course',CourseAPI);
 app.use('/student',StudentAPI);
-//app.use('/schedule',ScheduleAPI);
+app.use('/schedule',ScheduleAPI);
 app.use('/admin',AdminAPI);
 
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}

@@ -16,6 +16,8 @@
   /* login header*/
   .loginbox h1 {
     text-align: center;
+    position: relative;
+    top: 1px;
     padding: 35px 0 20px 0; /* top and bottom of LOGIN has padding */
     color: white;
   }

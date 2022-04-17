@@ -7,7 +7,7 @@ export default function Registration (props) {
     return (
         <React.Fragment> 
             <LoginHeader2/>
-            <h1 className={r.h1}>REGISTER AS</h1>
+            <h1 className={r.header}>REGISTER AS</h1>
             <div className={r.btn}>
             
             <button

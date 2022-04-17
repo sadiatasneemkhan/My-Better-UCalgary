@@ -14,7 +14,9 @@
   /* registration header*/
   .regbox h1 {
     text-align: center;
-    padding: 20px 0 10px 0;
+    position: relative;
+    top: 1px;
+    padding: 30px 0 10px 0;
     color: white;
   }
   

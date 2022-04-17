@@ -26,14 +26,6 @@ export default function App (){
         <Route path="/studentDashboard" exact component={StudentDashboard}/>
         <Route path="/adminDashboard" exact component={AdminDashboard}/>
 
-        <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Homepage}/>
-        <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Homepage}/>
-        <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Homepage}/>
-        <Route path="/login" exact component={Login}/>
-
         <Route path="*" exact component={PageNotFound}/>
       </Switch>
 

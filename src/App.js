@@ -35,7 +35,7 @@ export default function App (){
         <Route path="/studentRegistration" exact component={StudentRegistration}/>
         <Route path="/adminRegistration" exact component={AdminRegistration}/>
         
-        <Route path="/adminDashboard" exact component={Test}/>
+        <Route path="/adminDashboard" exact component={AdminDashboard}/>
 
         <Route path="/adminDashboard/viewCourse" exact component={ViewCourses}/>
         <Route path="/adminDashboard/updateCourse" exact component={UpdateCourse}/>

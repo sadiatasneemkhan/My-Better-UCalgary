@@ -9,7 +9,7 @@
   
   .button {
     display: inline-flexbox;
-    border-radius: 30px;
+    border-radius: 90px;
     border: none;
     outline: none;
     overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/

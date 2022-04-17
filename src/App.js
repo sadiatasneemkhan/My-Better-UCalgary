@@ -39,9 +39,9 @@ export default function App (){
 
         <Route path="/adminDashboard/viewCourse" exact component={ViewCourses}/>
         <Route path="/adminDashboard/updateCourse" exact component={UpdateCourse}/>
-        <Route path="/adminDashboard/addCourse" exact component={AddCourse}/>
-        <Route path="/adminDashboard/editCourse" exact component={EditCourse}/>
-        <Route path="/adminDashboard/removeCourse" exact component={RemoveCourse}/>
+        <Route path="/adminDashboard/updateCourse/add" exact component={AddCourse}/>
+        <Route path="/adminDashboard/updateCourse/edit" exact component={EditCourse}/>
+        <Route path="/adminDashboard/updateCourse/remove" exact component={RemoveCourse}/>
         <Route path="/adminDashboard/viewGrade" exact component={ViewGrade}/>
         <Route path="/adminDashboard/addGrade" exact component={AddGrade}/>
         

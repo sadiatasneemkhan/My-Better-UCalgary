@@ -27,7 +27,7 @@ export default function App (){
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={StudentRegistration}/>
+        <Route path="/" exact component={Registration}/>
 
         <Route path="/login" exact component={Login}/>
         <Route path="/registration" exact component={Registration}/>

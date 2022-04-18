@@ -17,10 +17,10 @@ const corsOptions ={
 
 app.use(cors(corsOptions));
 
-app.use('/course',CourseAPI);
-app.use('/student',StudentAPI);
-app.use('/schedule',ScheduleAPI);
-app.use('/admin',AdminAPI);
+app.use('/course', CourseAPI);
+app.use('/student', StudentAPI);
+app.use('/schedule', ScheduleAPI);
+app.use('/admin', AdminAPI);
 
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}
 

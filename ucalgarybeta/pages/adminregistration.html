@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Registration</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../style/adminregistration.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header"></div>
+
+    <img src="../images/logo.png" class="unilogo" />
+
+    <!-- Registration box -->
+    <div class="regbox">
+      <h1>REGISTRATION</h1>
+
+      <form method="post">
+        <div class="labels">
+            <label>Full Name</label>
+        </div>
+        <div class="textfield">
+            <!--Name inputs -->
+            <input class="center-block" type="text" placeholder="First Name" required />
+            <input class="center-block" type="text" placeholder="Last Name" required />
+        </div>
+
+        <div class="labels">
+            <label>Date Joined</label>
+        </div>
+        <div class="textfield">
+            <!--Date joined input -->
+          <input class="center-block" type="text" placeholder="DD/MM/YYYY" required />
+        </div>
+
+        <div class="labels">
+            <label>Account Info</label>
+        </div>
+        <div class="textfield">
+            <!--Account info inputs -->
+          <input class="center-block" type="text" placeholder="UCID" required />
+          <input class="center-block" type="text" placeholder="Department" required />
+          <input class="center-block" type="text" placeholder="Password" required />
+          <input class="center-block" type="text" placeholder="Confirm Password" required />
+        </div>
+
+        <!-- Register submission button -->
+        <div class="button">
+            <input class="center-block" type="submit" value="Register" />
+        </div>
+        
+      </form>
+    </div>
+  </body>
+  </body>
+</html>

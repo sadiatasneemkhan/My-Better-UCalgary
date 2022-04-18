@@ -1,7 +1,5 @@
 const express = require("express");
 const db = require("../db");
-const QString = require("query-string");
-
 const router = express.Router();
 // endpoint 1 & 2
 
@@ -17,9 +15,11 @@ router.get("/checkLogin", (req, res) => {
     if (err) throw err;
 
     if (result.length == 0) {
-      res.send({ validity: false });
+        if(ucid.charAt(0) ==1)
+      res.send({ account: 'Admin' });
+      else res.send({ account: 'Student' });
     } else {
-      res.send({ validity: true });
+      res.send({ account: 'ERROR' });
     }
   });
 });
@@ -73,7 +73,7 @@ VALUES(${UCID},'${deptname}',${yop},'${prog}')`;
   // adds to minor if applicable
   if (min !== "" || yom !== "" || dept_min !== "") {
     let query4 = `INSERT INTO MINORS_IN 
-     VALUES(${UCID},${dept_min},${yom},${min})`;
+     VALUES(${UCID},'${dept_min}','${yom}','${min}')`;
 
     db.query(query4, (err) => {
       if (err) throw err;
@@ -97,7 +97,7 @@ VALUES(${UCID},'${deptname}',${yop},'${prog}')`;
 router.get("/getGrades", (req, res) => {
   let UCID = req.query.UCID;
 
-  let query = `SELECT * FROM GRADE WHERE S_UCID = '${UCID}'`;
+  let query = `SELECT GRADE.S_UCID, GRADE.Course_Name, GRADE.Letter_grade, GRADE.course_semester FROM GRADE WHERE S_UCID = '${UCID}'`;
 
   //generic query
   db.query(query, (err, result) => {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import LoginHeader2 from '../components/loginHeader2';
 import sr from '../styles/studentRegistration.module.css'
 

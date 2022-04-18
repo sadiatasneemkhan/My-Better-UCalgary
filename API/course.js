@@ -1,5 +1,4 @@
 const express = require("express");
-const { findRenderedDOMComponentWithClass } = require("react-dom/test-utils");
 const db = require("../db");
 
 const router = express.Router();

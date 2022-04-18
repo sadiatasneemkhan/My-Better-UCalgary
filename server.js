@@ -1,12 +1,11 @@
 const express = require("express");
 const local = require('./localuser.json');
 const app = express();
-const port = local.port;
 const CourseAPI = require('./API/course');
 const StudentAPI = require('./API/student');
 const ScheduleAPI = require('./API/schedule');
 const AdminAPI = require('./API/admin');
-const http = require('http');
+
 // useful for parsing JSONs 
 const cors = require("cors");
 const corsOptions ={
@@ -24,8 +23,8 @@ app.use('/admin',AdminAPI);
 
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}
 
-const server = http.createServer(app);
+app.listen(local.port, () => {
+console.log(`server started on ${local.port}`);
+});
 
-server.listen(port);
-
-module.exports = server;
+module.exports = app;

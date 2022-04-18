@@ -7,7 +7,7 @@ export default function SignOutHeader (props) {
             <div className={soh.header}>
             <div className={soh.action}>
                 <button
-                className={soh.action-button}
+                
                 onClick={event =>  window.location.href='../pages/login.jsx'}
                 >
                 SIGN OUT

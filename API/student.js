@@ -8,22 +8,22 @@ const router = express.Router();
 router.get("/checkLogin", (req, res) => {
   let ucid = req.query.UCID;
   let pass = req.query.password;
-
+console.log('UCID[0]: ' + ucid[0]);
   let query = `SELECT * FROM ACCOUNT WHERE UCID ='${ucid}' AND password='${pass}'`;
   console.log(query);
   db.query(query, (err, result) => {
     if (err) throw err;
-
-    if (result.length == 0) {
-        if(ucid.charAt(0) ==1)
+console.log('result: ' +result);
+    if (result.length > 0) {
+        if(ucid.charAt(0) == 1){
       res.send({ account: 'Admin' });
+        }
       else res.send({ account: 'Student' });
     } else {
       res.send({ account: 'ERROR' });
     }
   });
 });
-
 
 // endpoint 3
 // http://localhost:5002/student/createStudent?First_name=Sam&Last_name=Fam&date=06262001&Address=119 Doulgasview Rd SE&Postalcode=T8M9V6&City=Calgary&Province=AB&Country=Canada&UCID=30090275&Phone_number=403-975-4511&pass=pa55word&Program=Bachelor of Science&Minor=&Dept_name=Psychology&Year_of_program=3&Year_of_minor&minor_dept

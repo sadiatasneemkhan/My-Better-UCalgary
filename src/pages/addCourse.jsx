@@ -7,7 +7,7 @@ function AddCourse() {
         <React.Fragment>
             <AdminDashboard/>
 
-            <div className={ac.course-details}>
+            <div className={ac.course_details}>
             <h1>ADD COURSE</h1>
 
             <form method="post">
@@ -17,7 +17,7 @@ function AddCourse() {
                 <div className={ac.textfield}>
                     
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
@@ -30,7 +30,7 @@ function AddCourse() {
                 <div className={ac.textfield}>
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Ex. Winter 2022"
                     required
@@ -43,7 +43,7 @@ function AddCourse() {
                 <div className={ac.textfield}>
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Description"
                     required
@@ -56,13 +56,13 @@ function AddCourse() {
                 <div className={ac.textfield}>
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="First Name"
                     required
                 />
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Last Name"
                     required
@@ -75,13 +75,13 @@ function AddCourse() {
                 <div className={ac.textfield}>
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Building"
                     required
                 />
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Room Number"
                     required
@@ -94,14 +94,14 @@ function AddCourse() {
                 <div className={ac.textfield}>
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Ex. MWF"
                     required
                 />
 
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Ex. 12:00 - 14:30"
                     required
@@ -113,7 +113,7 @@ function AddCourse() {
                 </div>
                 <div className={ac.textfield}>
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="0 - Max Capacity"
                     required
@@ -125,7 +125,7 @@ function AddCourse() {
                 </div>
                 <div className={ac.textfield}>
                 <input
-                    className={ac.center-block}
+                    className={ac.center_block}
                     type="text"
                     placeholder="Max Capacity"
                     required
@@ -133,7 +133,7 @@ function AddCourse() {
                 </div>
 
                 <div className={ac.button}>
-                <input className={ac.center-block} type="submit" value="Save" />
+                <input className={ac.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

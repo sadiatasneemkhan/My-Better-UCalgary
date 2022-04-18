@@ -7,7 +7,7 @@ function DropCourse() {
         <React.Fragment>
             <StudentDashboard/>
 
-            <div className={dc.course-details}>
+            <div className={dc.course_details}>
             <h1>DROP COURSE</h1>
 
             <form method="post">
@@ -17,7 +17,7 @@ function DropCourse() {
                 <div className={dc.textfield}>
               
                 <input
-                    className={dc.center-block}
+                    className={dc.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
@@ -25,7 +25,7 @@ function DropCourse() {
                 </div>
   
                 <div className={dc.button}>
-                <input className={dc.center-block} type="submit" value="Save" />
+                <input className={dc.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

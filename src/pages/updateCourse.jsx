@@ -7,27 +7,29 @@ function UpdateCourse() {
         <React.Fragment>
             <AdminDashboard/>
 
-            <h1>UPDATE COURSE</h1>
+            <h1 className={uc.header}>UPDATE COURSE</h1>
 
             <div className={uc.btn}>
             <button
                 type="button"
-                className={`${uc.button} ${uc.margin-right} ${uc.add}`}
-                onclick="window.location.href='addcourse.html'"
+                className={`${uc.bt} ${uc.margin_right} ${uc.add}`}
+                onClick={event =>  window.location.href='/admin/addCourse'}
             >
                 <span className={uc.buttontext}>ADD</span>
             </button>
+
             <button
                 type="button"
-                className={`${uc.button} ${uc.margin-right} ${uc.edit}`}
-                onclick="window.location.href='editcourse.html'"
+                className={`${uc.bt} ${uc.margin_right} ${uc.edit}`}
+                onClick={event =>  window.location.href='/admin/editCourse'}
             >
                 <span className={uc.buttontext}>EDIT</span>
             </button>
+            
             <button
                 type="button"
-                className={`$${uc.button} ${uc.remove}`}
-                onclick="window.location.href='removecourse.html'"
+                className={`${uc.bt} ${uc.remove}`}
+                onClick={event =>  window.location.href='/admin/removeCourse'}
             >
                 <span className={uc.buttontext}>REMOVE</span>
             </button>

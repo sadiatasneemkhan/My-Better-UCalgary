@@ -14,7 +14,7 @@ export default function SignOutHeader (props) {
                 </button>
             </div>
         </div>
-        <img src="../images/logo.png" class="unilogo" />
+        <img src="../images/logo.png" className={soh.unilogo} />
         </React.Fragment>
         
     );

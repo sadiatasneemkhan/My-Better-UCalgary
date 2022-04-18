@@ -8,12 +8,12 @@ function StudentSidebar () {
                 <span className={ss.left_jus}>DASHBOARD</span>
 
                 <div className={ss.menuoptions}>
-                    <a className={ss.left_jus} href="transcript.html">Transcript</a>
-                    <a className={ss.left_jus} href="calculator.html">Grade Calculator</a>
-                    <a className={ss.left_jus} href="schedule.html">Schedule</a>
-                    <a className={ss.left_jus} href="enrollcourse.html">Enroll into a Course</a>
-                    <a className={ss.left_jus} href="dropcourse.html">Drop a Course</a>
-                    <a className={ss.left_jus} href="degreetracker.html">Degree Tracker</a>
+                    <a className={ss.left_jus} href="/student/transcript">Transcript</a>
+                    <a className={ss.left_jus} href="/student/calculator">Grade Calculator</a>
+                    <a className={ss.left_jus} href="/student/schedule">Schedule</a>
+                    <a className={ss.left_jus} href="/student/enrollCourse">Enroll into a Course</a>
+                    <a className={ss.left_jus} href="/student/dropCourse">Drop a Course</a>
+                    <a className={ss.left_jus} href="/student/degreeTracker">Degree Tracker</a>
                 </div>
             </div>
         </React.Fragment>

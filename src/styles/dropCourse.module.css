@@ -21,7 +21,9 @@ h1 {
   /* header*/
   .course_details h1 {
     text-align: center;
-    padding: 10px 0 10px 0;
+    padding: 50px 0 50px 0;
+    position: relative;
+    top: 1px;
     color: white;
   }
   

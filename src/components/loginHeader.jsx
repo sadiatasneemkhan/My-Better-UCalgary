@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import '../styles/loginHeader.css'
+import lh1 from '../styles/loginHeader.module.css'
 
 export default function LoginHeader (props) {
     return (
-        <div className="header">
-            <div className="action">
+        <div className={lh1.header}>
+            <div className={lh1.action}>
                 <button
-                className="action-button"
-                onClick={event =>  window.location.href='../pages/login.jsx'}
+                className={lh1.action_button}
+                onClick={event =>  window.location.href='../login'}
                 >
                 LOGIN
                 </button>

@@ -1,0 +1,64 @@
+.header {
+  text-align: center;
+  margin: 50px 0;
+  position: relative;
+  top: 10px;
+  padding: 15px 0 20px 0;
+  color: black;
+}
+
+.bt {
+  display: inline-block;
+  border-radius: 90px;
+  border: none;
+  outline: none;
+  overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/
+
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.add {
+  background: rgb(233, 206, 85);
+}
+
+.add:hover {
+  background: rgb(221, 187, 34);
+}
+
+.edit {
+  background: #f8b73f;
+}
+
+.edit:hover {
+  background: #ee9b00;
+}
+
+.remove {
+  background: #e74747;
+}
+
+.remove:hover {
+  background: #e22222;
+}
+
+.buttontext {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+button.margin_right {
+  margin-right: 60px;
+}

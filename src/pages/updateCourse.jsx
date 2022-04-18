@@ -1,35 +1,37 @@
 import React from "react";
 import AdminDashboard from '../components/adminDashboard';
-import '../styles/updateCourse.css'
+import uc from  '../styles/updateCourse.module.css'
 
 function UpdateCourse() {
     return (  
         <React.Fragment>
             <AdminDashboard/>
 
-            <h1>UPDATE COURSE</h1>
+            <h1 className={uc.header}>UPDATE COURSE</h1>
 
-            <div class="btn">
+            <div className={uc.btn}>
             <button
                 type="button"
-                class="button margin-right add"
-                onclick="window.location.href='addcourse.html'"
+                className={`${uc.bt} ${uc.margin_right} ${uc.add}`}
+                onClick={event =>  window.location.href='/admin/addCourse'}
             >
-                <span class="buttontext">ADD</span>
+                <span className={uc.buttontext}>ADD</span>
             </button>
+
             <button
                 type="button"
-                class="button margin-right edit"
-                onclick="window.location.href='editcourse.html'"
+                className={`${uc.bt} ${uc.margin_right} ${uc.edit}`}
+                onClick={event =>  window.location.href='/admin/editCourse'}
             >
-                <span class="buttontext">EDIT</span>
+                <span className={uc.buttontext}>EDIT</span>
             </button>
+            
             <button
                 type="button"
-                class="button remove"
-                onclick="window.location.href='removecourse.html'"
+                className={`${uc.bt} ${uc.remove}`}
+                onClick={event =>  window.location.href='/admin/removeCourse'}
             >
-                <span class="buttontext">REMOVE</span>
+                <span className={uc.buttontext}>REMOVE</span>
             </button>
             </div>
         </React.Fragment>

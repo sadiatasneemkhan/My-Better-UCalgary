@@ -1,4 +1,11 @@
-.grade-details {
+h1 {
+    text-align: center;
+    margin: 50px 0;
+    padding: 15px 0 20px 0;
+    color: black;
+  }
+  
+  .course_details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6,19 +13,21 @@
   
     /* rounded box */
     width: 500px;
-    height: 500px;
-    background: rgb(233, 206, 85);
+    height: 350px;
+    background: #e74747;
     border-radius: 40px;
   }
   
   /* header*/
-  .grade-details h1 {
+  .course_details h1 {
     text-align: center;
-    padding: 30px 0 20px 0;
+    padding: 50px 0 50px 0;
+    position: relative;
+    top: 1px;
     color: white;
   }
   
-  .grade-details form {
+  .course_details form {
     padding: 0 40px;
     box-sizing: border-box;
   }
@@ -38,7 +47,11 @@
     border-radius: 5px;
   }
   
-  .center-block {
+  .same-row input {
+    width: 47%;
+  }
+  
+  .center_block {
     margin: auto;
     margin-top: 2px;
     display: block;
@@ -46,7 +59,7 @@
   
   .button input {
     position: relative;
-    top: 10px;
+    top: 40px;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -57,7 +70,14 @@
   }
   
   .labels {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
     color: white;
+    font-weight: 700;
+    text-align: center;
   }
+  
+  .subheading {
+    display: block;
+    margin: 20px 0;
+  }
+  

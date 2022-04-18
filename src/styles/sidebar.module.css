@@ -1,0 +1,33 @@
+.sidebar {
+  width: 230px;
+  position: fixed;
+  left: 0;
+  top: 159.79px;
+  height: 100%;
+  background: #f2f2f0;
+}
+
+.sidebar span {
+  margin: 40px 20px;
+  font-weight: 700;
+}
+
+.menuoptions a {
+  color: #888787;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.left_jus {
+  display: block;
+  margin: 40px;
+  text-align: left;
+}
+
+@media screen and (max-width: 690px){
+  .sidebar{
+      width: 120px;
+  }     
+}

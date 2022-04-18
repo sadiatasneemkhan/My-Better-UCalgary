@@ -1,41 +1,41 @@
 import React, { Component } from 'react';
 import LoginHeader2 from '../components/loginHeader2';
-import '../styles/login.css'
+import l from '../styles/login.module.css'
 
 export default function Login (props) {
     return (
         <React.Fragment> 
             <LoginHeader2/>
-            <div className="loginbox">
+            <div className={l.loginbox}>
                 <h1>LOGIN</h1>
                 
                 <form method="post">
-                    <div className="textfield">
-                    <input className="center-block" type="text" placeholder="UCID" required />
+                    <div className={l.textfield}>
+                    <input className={l.center_block} type="text" placeholder="UCID" required />
                     </div>
 
-                    <div className="textfield">
+                    <div className={l.textfield}>
                     <input
-                        className="center-block"
+                        className={l.center_block}
                         type="password"
                         placeholder="Password"
                         required
                     />
                     </div>
 
-                    <div className="loginfield">
-                    <input className="center-block" type="submit" value="Login" />
+                    <div className={l.loginfield}>
+                    <input className={l.center_block} type="submit" value="Login" />
                     </div>
 
-                    <div className="forgotpass">Forgot password?</div>
-                    <div className="createacc">
-                    Not registered yet? <a href="registration.html">Create an account </a>
+                    <div className={l.forgotpass}>Forgot password?</div>
+                    <div className={l.createacc}>
+                    Not registered yet? <a href="registration">Create an account </a>
                     </div>
                 </form>
 
-                <img src="../images/loginuser.png" className="usericon" />
-                <img src="../images/loginpassword.png" className="passicon" />
-                <img src="../images/login.png" className="loginicon" />
+                <img src="../images/loginuser.png" className={l.usericon} />
+                <img src="../images/loginpassword.png" className={l.passicon} />
+                <img src="../images/login.png" className={l.loginicon} />
             </div>
         </React.Fragment>
     ); 

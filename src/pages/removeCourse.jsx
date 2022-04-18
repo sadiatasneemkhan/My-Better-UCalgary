@@ -1,31 +1,31 @@
 import React from "react";
 import AdminDashboard from '../components/adminDashboard';
-import '../styles/removeCourse.css'
+import rc from '../styles/removeCourse.module.css'
 
 function RemoveCourse() {
     return (  
         <React.Fragment>
             <AdminDashboard/>
 
-            <div class="course-details">
+            <div className={rc.course_details}>
             <h1>REMOVE COURSE</h1>
 
             <form method="post">
-                <div class="labels">
+                <div className={rc.labels}>
                 <label>Choose the course you wish to remove:</label>
                 </div>
-                <div class="textfield">
+                <div className={rc.textfield}>
                     
                 <input
-                    class="center-block"
+                    className={rc.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
                 />
                 </div>
                 
-                <div class="button">
-                <input class="center-block" type="submit" value="Save" />
+                <div className={rc.button}>
+                <input className={rc.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

@@ -1,4 +1,11 @@
-.course-details {
+h1 {
+    text-align: center;
+    margin: 50px 0;
+    padding: 15px 0 20px 0;
+    color: black;
+  }
+  
+  .course_details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6,26 +13,28 @@
   
     /* rounded box */
     width: 500px;
-    height: 720px;
-    background: #f8b73f;
+    height: 350px;
+    background: #e74747;
     border-radius: 40px;
   }
   
   /* header*/
-  .course-details h1 {
+  .course_details h1 {
     text-align: center;
-    padding: 20px 0 10px 0;
+    padding: 50px 0 50px 0;
+    position: relative;
+    top: 1px;
     color: white;
   }
   
-  .course-details form {
+  .course_details form {
     padding: 0 40px;
     box-sizing: border-box;
   }
   
   form .textfield {
     position: relative;
-    margin: 10px;
+    margin: 10px 0;
   }
   
   .textfield input {
@@ -42,7 +51,7 @@
     width: 47%;
   }
   
-  .center-block {
+  .center_block {
     margin: auto;
     margin-top: 2px;
     display: block;
@@ -50,7 +59,7 @@
   
   .button input {
     position: relative;
-    top: 1px;
+    top: 40px;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -61,15 +70,14 @@
   }
   
   .labels {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
     color: white;
+    font-weight: 700;
+    text-align: center;
   }
   
   .subheading {
     display: block;
     margin: 20px 0;
-    font-size: 16px;
-    color: rgb(15, 6, 6);
   }
   

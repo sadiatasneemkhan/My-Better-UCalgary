@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
 import LoginHeader2 from '../components/loginHeader2';
-import '../styles/adminRegistration.css'
+import ar from '../styles/adminRegistration.module.css'
 
 export default function AdminRegistration (props) {
     
     return (
         <React.Fragment> 
             <LoginHeader2/>
-            <div classNameName="regbox">
+            <div className={ar.regbox}>
                 <h1>REGISTRATION</h1>
 
                 <form method="post">
-                    <div classNameName="labels">
+                    <div className={ar.labels}>
                         <label>Full Name</label>
                     </div>
-                    <div className="textfield">
-                        <input className="center-block" type="text" placeholder="First Name" required />
-                        <input className="center-block" type="text" placeholder="Last Name" required />
+                    <div className={ar.textfield}>
+                        <input className={ar.center_block} type="text" placeholder="First Name" required />
+                        <input className={ar.center_block} type="text" placeholder="Last Name" required />
                     </div>
 
-                    <div className="labels">
+                    <div className={ar.labels}>
                         <label>Date Joined</label>
                     </div>
-                    <div className="textfield">
-                    <input className="center-block" type="text" placeholder="DD/MM/YYYY" required />
+                    <div className={ar.textfield}>
+                    <input className={ar.center_block} type="text" placeholder="DD/MM/YYYY" required />
                     </div>
 
-                    <div className="labels">
+                    <div className={ar.labels}>
                         <label>Account Info</label>
                     </div>
-                    <div className="textfield">
-                    <input className="center-block" type="text" placeholder="UCID" required />
-                    <input className="center-block" type="text" placeholder="Department" required />
-                    <input className="center-block" type="text" placeholder="Password" required />
-                    <input className="center-block" type="text" placeholder="Confirm Password" required />
+                    <div className={ar.textfield}>
+                    <input className={ar.center_block} type="text" placeholder="UCID" required />
+                    <input className={ar.center_block} type="text" placeholder="Department" required />
+                    <input className={ar.center_block} type="text" placeholder="Password" required />
+                    <input className={ar.center_block} type="text" placeholder="Confirm Password" required />
                     </div>
 
-                    <div className="button">
-                        <input className="center-block" type="submit" value="Register" />
+                    <div className={ar.button}>
+                        <input className={ar.center_block} type="submit" value="Register" />
                     </div>
                     
                 </form>

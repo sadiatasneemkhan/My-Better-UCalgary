@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Page Template */
+.header {
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, white, #ffcf06, #f83f3f);
+
+  display: flex;
+  align-items: row;
+  justify-content: end;
+}
+
+.unilogo {
+  width: 375px;
+  position: relative;
+  right: 25px;
+}
+
+.action_button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+}
+.action_button:hover {
+  font-weight: 700;
+}

@@ -1,0 +1,82 @@
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  padding: 15px 0 20px 0;
+  color: black;
+}
+
+.course_details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* rounded box */
+  width: 500px;
+  height: 350px;
+  background: #e74747;
+  border-radius: 40px;
+}
+
+/* header*/
+.course_details h1 {
+  text-align: center;
+  position: relative;
+  top: 1px;
+  padding: 40px 0 50px 0;
+  color: white;
+}
+
+.course_details form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .textfield {
+  position: relative;
+  margin: 10px 0;
+}
+
+.textfield input {
+  width: 50%;
+  padding: 0 5px;
+  height: 20px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.same-row input {
+  width: 47%;
+}
+
+.center_block {
+  margin: auto;
+  margin-top: 2px;
+  display: block;
+}
+
+.button input {
+  position: relative;
+  top: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: white;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 16px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subheading {
+  display: block;
+  margin: 20px 0;
+}

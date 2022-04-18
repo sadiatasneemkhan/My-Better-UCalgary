@@ -1,0 +1,65 @@
+.grade_details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* rounded box */
+  width: 500px;
+  height: 500px;
+  background: rgb(233, 206, 85);
+  border-radius: 40px;
+}
+
+/* header*/
+.grade_details h1 {
+  text-align: center;
+  padding: 30px 0 20px 0;
+  position: relative;
+  top: 1px;
+  color: white;
+}
+
+.grade_details form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .textfield {
+  position: relative;
+  margin: 10px 0;
+}
+
+.textfield input {
+  width: 50%;
+  padding: 0 5px;
+  height: 20px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.center_block {
+  margin: auto;
+  margin-top: 2px;
+  display: block;
+}
+
+.button input {
+  position: relative;
+  top: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: white;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.labels {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}

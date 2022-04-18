@@ -12,24 +12,21 @@ export default function Login (props) {
         account: null,
     }]);
 
-
     const submission = (evt) => {
         evt.preventDefault();
         alert(`user: ${user} pass: ${pass}`);
         const url = `http://localhost:5001/student/checklogin?UCID=${user}&password=${pass}`;
 
     }
-useEffect(() => {
-    const url = `http://localhost:5001/student/checklogin?UCID=${user}&password=${pass}`;
-    axios.get(url).then((account) =>{
-        const acc = account.data;
-        console.log();
-}).catch(err){
-console.log(err);
-}
+    
+    useEffect(() => {
+        const url = `http://localhost:5001/student/checklogin?UCID=${user}&password=${pass}`;
+        axios.get(url).then((account) =>{
+            const acc = account.data;
+            console.log();
+    });
 
 }, [])
-
     
     return (
         <React.Fragment> 

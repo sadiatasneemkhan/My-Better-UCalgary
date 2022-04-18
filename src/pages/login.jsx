@@ -3,8 +3,6 @@ import LoginHeader2 from "../components/loginHeader2";
 import axios from "axios";
 import l from "../styles/login.module.css";
 
-
-
 // makes it so that the API is not called the moment the page is rendered
 const useDidMountEffect = (fetcher) => {
 

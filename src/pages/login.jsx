@@ -28,9 +28,9 @@ export default function Login(props) {
     if (data.account == "ERROR") {
       alert("The username or Password entered was not correct");
     } else if (data.account == "Admin") {
-      document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
+      document.location.href = `${window.location.origin}/admin`;
     } else if (data.account == "Student") {
-      document.location.href = `${window.location.origin}/student/?ucid=${user}`;
+      document.location.href = `${window.location.origin}/student`;
     }
   }
 

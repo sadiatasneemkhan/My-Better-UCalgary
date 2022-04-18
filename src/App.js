@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import PageNotFound from './pages/pageNotFound';
 import Homepage from './pages/homepage';
 import Login from './pages/login';
@@ -25,8 +25,8 @@ import DegreeTracker from './pages/degreeTracker';
 export default function App (){
 
   return (
-    <Router>
-      <Routes>
+    <Router basename=''>
+      <Switch>
         <Route path="/" exact component={Homepage}/>
 
         <Route path="/login" exact component={Login}/>
@@ -54,7 +54,7 @@ export default function App (){
         <Route path="/student/degreeTracker" exact component={DegreeTracker}/>
 
         <Route path="*" exact component={PageNotFound}/>
-      </Routes>
+      </Switch>
 
 
 

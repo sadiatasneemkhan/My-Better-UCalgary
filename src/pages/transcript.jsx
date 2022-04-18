@@ -3,6 +3,7 @@ import StudentDashboard from '../components/studentDashboard';
 import t from '../styles/transcript.module.css'
 
 function Transcript() {
+
     return (  
         <React.Fragment>
             <StudentDashboard/>
@@ -24,8 +25,6 @@ function Transcript() {
                 <td className={t.filterable_cell}>98</td>
                 <td className={t.filterable_cell}>A+</td>
                 <td className={t.filterable_cell}>4.0</td>
-
-
             </tr>
             <tr>
             <td className={t.filterable_cell}>ENGG 201</td>

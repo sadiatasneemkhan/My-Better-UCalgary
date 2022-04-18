@@ -25,7 +25,7 @@ import DegreeTracker from './pages/degreeTracker';
 export default function App (){
 
   return (
-    <Router>
+    <Router basename=''>
       <Switch>
         <Route path="/" exact component={Homepage}/>
 

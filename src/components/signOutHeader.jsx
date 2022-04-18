@@ -7,14 +7,14 @@ export default function SignOutHeader (props) {
             <div className={soh.header}>
             <div className={soh.action}>
                 <button
-                className={soh.action-button}
-                onClick={event =>  window.location.href='../pages/login.jsx'}
+                className={soh.action_button}
+                onClick={event =>  window.location.href='/'}
                 >
                 SIGN OUT
                 </button>
             </div>
         </div>
-        <img src="../images/logo.png" class="unilogo" />
+        <img src="../images/logo.png" className={soh.unilogo} />
         </React.Fragment>
         
     );

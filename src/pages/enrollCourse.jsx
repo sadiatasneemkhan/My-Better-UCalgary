@@ -7,7 +7,7 @@ function EnrollCourse() {
         <React.Fragment>
             <StudentDashboard/>
 
-            <div className={erc.course-details}>
+            <div className={erc.course_details}>
             <h1>ENROLL INTO COURSE</h1>
 
             <form method="post">
@@ -16,14 +16,14 @@ function EnrollCourse() {
                 </div>
                 <div className={erc.textfield}>
                 <input
-                    className={erc.center-block}
+                    className={erc.center_block}
                     type="text"
                     placeholder="Ex. CPSC 471"
                     required
                 />
                 </div>
                 <div className={erc.button}>
-                <input className={erc.center-block} type="submit" value="Save" />
+                <input className={erc.center_block} type="submit" value="Save" />
                 </div>
             </form>
             </div>

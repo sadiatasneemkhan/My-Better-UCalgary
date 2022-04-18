@@ -35,23 +35,23 @@ export default function App (){
         <Route path="/studentRegistration" exact component={StudentRegistration}/>
         <Route path="/adminRegistration" exact component={AdminRegistration}/>
         
-        <Route path="/adminDashboard" exact component={AdminDashboard}/>
+        <Route path="/admin" exact component={AdminDashboard}/>
 
-        <Route path="/adminDashboard/viewCourse" exact component={ViewCourses}/>
-        <Route path="/adminDashboard/updateCourse" exact component={UpdateCourse}/>
-        <Route path="/adminDashboard/addCourse" exact component={AddCourse}/>
-        <Route path="/adminDashboard/editCourse" exact component={EditCourse}/>
-        <Route path="/adminDashboard/removeCourse" exact component={RemoveCourse}/>
-        <Route path="/adminDashboard/viewGrade" exact component={ViewGrade}/>
-        <Route path="/adminDashboard/addGrade" exact component={AddGrade}/>
+        <Route path="/admin/viewCourse" exact component={ViewCourses}/>
+        <Route path="/admin/updateCourse" exact component={UpdateCourse}/>
+        <Route path="/admin/addCourse" exact component={AddCourse}/>
+        <Route path="/admin/editCourse" exact component={EditCourse}/>
+        <Route path="/admin/removeCourse" exact component={RemoveCourse}/>
+        <Route path="/admin/viewGrade" exact component={ViewGrade}/>
+        <Route path="/admin/addGrade" exact component={AddGrade}/>
         
-        <Route path="/studentDashboard" exact component={StudentDashboard}/>
+        <Route path="/student" exact component={StudentDashboard}/>
 
-        <Route path="/studentDashboard/transcript" exact component={Transcript}/>
-        <Route path="/studentDashboard/calculator" exact component={Calculator}/>
-        <Route path="/studentDashboard/enrollCourse" exact component={EnrollCourse}/>
-        <Route path="/studentDashboard/dropCourse" exact component={DropCourse}/>
-        <Route path="/studentDashboard/degreeTracker" exact component={DegreeTracker}/>
+        <Route path="/student/transcript" exact component={Transcript}/>
+        <Route path="/student/calculator" exact component={Calculator}/>
+        <Route path="/student/enrollCourse" exact component={EnrollCourse}/>
+        <Route path="/student/dropCourse" exact component={DropCourse}/>
+        <Route path="/student/degreeTracker" exact component={DegreeTracker}/>
 
         <Route path="*" exact component={PageNotFound}/>
       </Switch>

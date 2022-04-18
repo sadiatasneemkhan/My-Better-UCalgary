@@ -13,7 +13,7 @@ function UpdateCourse() {
             <button
                 type="button"
                 className={`${uc.bt} ${uc.margin_right} ${uc.add}`}
-                onClick={event =>  window.location.href='/adminDashboard/addCourse'}
+                onClick={event =>  window.location.href='/admin/addCourse'}
             >
                 <span className={uc.buttontext}>ADD</span>
             </button>
@@ -21,7 +21,7 @@ function UpdateCourse() {
             <button
                 type="button"
                 className={`${uc.bt} ${uc.margin_right} ${uc.edit}`}
-                onClick={event =>  window.location.href='/adminDashboard/editCourse'}
+                onClick={event =>  window.location.href='/admin/editCourse'}
             >
                 <span className={uc.buttontext}>EDIT</span>
             </button>
@@ -29,7 +29,7 @@ function UpdateCourse() {
             <button
                 type="button"
                 className={`${uc.bt} ${uc.remove}`}
-                onClick={event =>  window.location.href='/adminDashboard/removeCourse'}
+                onClick={event =>  window.location.href='/admin/removeCourse'}
             >
                 <span className={uc.buttontext}>REMOVE</span>
             </button>

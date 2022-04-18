@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../style/login.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="client.js"></script>
+  </head>
+
+  <body onload="test(2)">
+    <!-- Header -->
+    <div class="header"></div>
+
+    <img src="../images/logo.png" class="unilogo" />
+
+    <!-- Login box -->
+    <div class="loginbox">
+      <h1>LOGIN</h1>
+
+      <form action="verifyLogin(document.getElementById('UCID').value, document.getElementById('Password').value)}">
+        <!-- UCID input text box-->
+        <div class="textfield">
+          <input class="center-block" id="UCID "type="text" placeholder="UCID" required />
+        </div>
+
+        <!-- Password input text box-->
+        <div class="textfield">
+          <input
+            class="center-block"
+            id="Password"
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <!-- Login submission button -->
+        <div class="loginfield">
+          <input class="center-block" type="submit"/>
+        </div>
+
+        <!-- Forgot password and Create new account links -->
+        <div class="forgotpass">Forgot password?</div>
+        <div class="createacc">
+          Not registered yet? <a href="registration.html">Create an account </a>
+        </div>
+      </form>
+
+      <img src="../images/loginuser.png" class="usericon" />
+      <img src="../images/loginpassword.png" class="passicon" />
+      <img src="../images/login.png" class="loginicon" />
+    </div>
+  </body>
+</html>

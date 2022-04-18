@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Page Template */
+.header {
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, white, #ffcf06, #f83f3f);
+
+  display: flex;
+  align-items: row;
+  justify-content: end;
+}
+
+.unilogo {
+  width: 375px;
+  position: relative;
+  right: 25px;
+}
+
+/* Sign Out Button */
+.sign-out-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+}
+.sign-out-button:hover {
+  font-weight: 700;
+}
+
+.sidebar {
+  width: 230px;
+  position: fixed;
+  left: 0;
+  top: 159.79px;
+  height: 100%;
+  background: #f2f2f0;
+}
+
+.sidebar span {
+  margin: 40px 20px;
+  font-weight: 700;
+}
+
+.menuoptions a {
+  color: #888787;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.left-jus {
+  display: block;
+  margin: 40px;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px 0;
+  padding: 15px 0 20px 0;
+  color: black;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/
+
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+
+  font-family: "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.add {
+  background: rgb(233, 206, 85);
+}
+
+.add:hover {
+  background: rgb(221, 187, 34);
+}
+
+.edit {
+  background: #f8b73f;
+}
+
+.edit:hover {
+  background: #ee9b00;
+}
+
+.remove {
+  background: #e74747;
+}
+
+.remove:hover {
+  background: #e22222;
+}
+
+.buttontext {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+button.margin-right {
+  margin-right: 60px;
+}

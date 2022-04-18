@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
+    "browserify": "^17.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "http": "^0.0.1-security",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15",
     "query-string": "^7.1.1",
@@ -41,5 +44,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "type": "commonjs"
 }

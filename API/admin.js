@@ -4,7 +4,7 @@ const db = require("../db");
 const router = express.Router();
 
 // endpoint 4
-// http://localhost:5001/admin/createadmin?First_name=Sam&Last_name=Fam&UCID=19999998&pass=password122&Dept_name=Chemistry&Dept_head=Jennifer Love&date=06262001
+// http://localhost:5001/admin/createadmin?First_name=Sam&Last_name=Fam&UCID=19999998&pass=password122&Confirmed_pass=password122&Dept_name=Chemistry&Dept_head=Jennifer Love&date=06262001
 router.post('/createadmin',(req,res) =>{
  
   let fName = req.query.First_name;
@@ -46,8 +46,6 @@ router.post('/createadmin',(req,res) =>{
   else {
     res.send('Passwords did not match' );
   }
-
-  
 });
 
 router.get('/studentTid',(req,res) =>{

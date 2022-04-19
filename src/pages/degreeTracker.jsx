@@ -3,7 +3,11 @@ import StudentDashboard from "../components/studentDashboard";
 import dt from "../styles/degreeTracker.module.css";
 import axios from "axios";
 function DegreeTracker() {
-  const id = "30091234";
+    let id;
+    let i = new URLSearchParams(window.location.href.split("?")[1]);
+    i.forEach((para) => {
+      id = para;
+    });
 // data is in this variable 
   const [courses, setCourses] = useState([
     {

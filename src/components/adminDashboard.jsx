@@ -3,10 +3,11 @@ import AdminSidebar from './adminSidebar';
 import SignOutHeader from './signOutHeader';
 
 function AdminDashboard() {
+
     return (  
         <React.Fragment>
             <SignOutHeader/>
-            <AdminSidebar/>
+            <AdminSidebar />
         </React.Fragment>
     );
 }

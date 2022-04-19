@@ -69,7 +69,7 @@ export default function AdminRegistration (props) {
         });
         
         if(data !== null && (post.pass === post.Confirmed_pass)){
-            document.location.href = `${window.location.origin}/admin`;
+            document.location.href = `${window.location.origin}/admin/?ucid=${ucid}`;
             alert(`${ucid}: Admin account has been successfully created.`)
         }else{
             alert(`An error has orrcurred while creating the account for: ${ucid}`);

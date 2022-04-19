@@ -1,4 +1,4 @@
-import React, {  useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import LoginHeader2 from "../components/loginHeader2";
 import axios from "axios";
 import l from "../styles/login.module.css";
@@ -28,9 +28,9 @@ export default function Login(props) {
     if (data.account == "ERROR") {
       alert("The username or Password entered was not correct");
     } else if (data.account == "Admin") {
-      document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
+      document.location.href = `${window.location.origin}/admin?UCID=${user}`;
     } else if (data.account == "Student") {
-      document.location.href = `${window.location.origin}/student/?ucid=${user}`;
+      document.location.href = `${window.location.origin}/student?UCID=${user}`;
     }
   }
 

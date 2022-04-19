@@ -18,9 +18,10 @@ body {
   }
 
   .unilogo {
-    width: 375px;
+    width: 275px;
     position: relative;
-    right: 25px;
+    top: 25px;
+    right: -25px;
   }
   
   .action_button {

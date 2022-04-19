@@ -14,7 +14,7 @@ export default function LoginHeader2 (props) {
                 </button>
             </div>
         </div>
-        <img src="../images/logo.png" className={lh2.unilogo} />
+        <img src="../images/horizontal-logo.png" className={lh2.unilogo} />
         </React.Fragment>
         
     );

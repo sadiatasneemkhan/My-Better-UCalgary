@@ -1,10 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: "Helvetica", sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/schulich3.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "Helvetica", sans-serif;
+  box-sizing: border-box;
+}
   
   /* Page Template */
   .header {
@@ -35,3 +37,5 @@ body {
   .action_button:hover {
     font-weight: 700;
   }
+
+  

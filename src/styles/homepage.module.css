@@ -1,34 +1,28 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-    font-family: "Helvetica", sans-serif;
-    box-sizing: border-box;
-  }
-
 .welcome {
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 40px;
     font-weight: 700;
+    color: white;
     position: relative;
-    top: 100px;
+    top: 240px;
   }
 
   .message {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 25px;
+    font-size: 28px;
+    color: white;
     position: relative;
-    top: 120px;
+    top: 240px;
   }
 
 .logo {
-    width: 35%;
+    width: 50%;
     position: relative;
-    top: 210px;
+    top: 90px;
     margin: auto;
     display: flex;
     justify-content: center;

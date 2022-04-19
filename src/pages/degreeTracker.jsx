@@ -17,7 +17,7 @@ function DegreeTracker() {
             <div className={`${dt.yop} ${dt.txt}`}>Year of Program:</div>
             </div>
 
-            <h2 className={dt.left_jus}>COURSES COMPLETED</h2>
+            <h2 className={`${dt.left_jus} ${dt.course_comp}`}>COURSES COMPLETED</h2>
         </React.Fragment>
     );
 }

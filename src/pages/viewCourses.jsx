@@ -7,9 +7,9 @@ function ViewCourses() {
         <React.Fragment>
             <AdminDashboard/>
 
-            <div className={vc.course-details}>
+            <div className={vc.course_details}>
                 <h1>COURSE VIEWER</h1>
-                    <table className={`${vc.table} ${vc.table-light} ${vc.table-striped} ${vc.scrollable}`}>
+                    <table className={`${vc.table} ${vc.table_light} ${vc.table_striped} ${vc.scrollable}`}>
                         <tr className={vc.attributes}>
                             <th>Course Name</th>
                             <th>Semester</th>
@@ -18,31 +18,35 @@ function ViewCourses() {
 
                         </tr>
                         <tr>
-                            <td className={vc.filterable-cell}>ENSF 480</td>
-                            <td className={vc.filterable-cell}>Fall 2019</td>
-                            <td className={vc.filterable-cell}>Huffington</td>
-                            <td className={vc.filterable-cell}>Completed</td>
+                            <td className={vc.filterable_cell}>ENSF 480</td>
+                            <td className={vc.filterable_cell}>Fall 2019</td>
+                            <td className={vc.filterable_cell}>Huffington</td>
+                            <td className={vc.filterable_cell}>Completed</td>
                         </tr>
                         <tr>
-                        <td className={vc.filterable-cell}>ENSF 409</td>
-                        <td className={vc.filterable-cell}>Spring 2020</td>
-                        <td className={vc.filterable-cell}>Terster</td>
-                        <td className={vc.filterable-cell}>Completed</td>
+                        <td className={vc.filterable_cell}>ENSF 409</td>
+                        <td className={vc.filterable_cell}>Spring 2020</td>
+                        <td className={vc.filterable_cell}>Terster</td>
+                        <td className={vc.filterable_cell}>Completed</td>
                         </tr>
                         <tr>
-                        <td className={vc.filterable-cell}>CPSC 471</td>
-                        <td className={vc.filterable-cell}>Winter 2022</td>
-                        <td className={vc.filterable-cell}>Sailunaz</td>
-                        <td className={vc.filterable-cell}>Ongoing</td>
+                        <td className={vc.filterable_cell}>CPSC 471</td>
+                        <td className={vc.filterable_cell}>Winter 2022</td>
+                        <td className={vc.filterable_cell}>Sailunaz</td>
+                        <td className={vc.filterable_cell}>Ongoing</td>
                         </tr>
                     </table>
-                <div className={vc.in}>
-                    <input type="number"/>
-                    <span 
-                        id="search" 
-                        onclick="SearchStudentGrades()" 
-                        className={`${vc.btn} ${vc.btn-outline-light}`}>
-                        Search Course(s)</span>
+                
+                    <div className={vc.textfield}>
+                        <input 
+                            className={vc.center_block} 
+                            type="text" 
+                            placeholder="Ex. CPSC 471" 
+                            required />
+                    </div>
+                
+                <div className={vc.button}>
+                    <input className={vc.center_block} type="submit" value="Search Course(s)" />
                 </div>
             </div>
         </React.Fragment>

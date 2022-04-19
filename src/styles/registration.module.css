@@ -1,5 +1,7 @@
-h1 {
+.header {
     text-align: center;
+    position: relative;
+    top: 30px;
     margin: 50px 0;
     padding: 15px 0 20px 0;
     color: black;
@@ -7,7 +9,7 @@ h1 {
   
   .button {
     display: inline-flexbox;
-    border-radius: 30px;
+    border-radius: 90px;
     border: none;
     outline: none;
     overflow: hidden; /* ensure any content inside button which overflows will be contained by border radius*/

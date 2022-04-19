@@ -1,4 +1,4 @@
-.course-details {
+.course_details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -6,19 +6,21 @@
   
     /* rounded box */
     width: 500px;
-    height: 690px;
+    height: 700px;
     background: rgb(233, 206, 85);
     border-radius: 40px;
   }
   
   /* header*/
-  .course-details h1 {
+  .course_details h1 {
     text-align: center;
+    position: relative;
+    top: 1px;
     padding: 20px 0 10px 0;
     color: white;
   }
   
-  .course-details form {
+  .course_details form {
     padding: 0 40px;
     box-sizing: border-box;
   }
@@ -38,7 +40,7 @@
     border-radius: 5px;
   }
   
-  .center-block {
+  .center_block {
     margin: auto;
     margin-top: 2px;
     display: block;

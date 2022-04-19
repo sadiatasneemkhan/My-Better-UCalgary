@@ -1,5 +1,4 @@
 const express = require("express");
-const { findRenderedDOMComponentWithClass } = require("react-dom/test-utils");
 const db = require("../db");
 
 const router = express.Router();
@@ -17,6 +16,8 @@ router.get("/courses", (req, res) => {
 
 // http://localhost:5002/course/createCourse?name=CPSC 441&semester=Fall 2022&dept=Computer Science&First_name=Carey&Last_name=Williamson&desc=Computer Networks&status=Completed&building=EEEL&room_num=138&day=MWF&time=13:00-13:50&Classsize=196&cap=200&Ucid=12345678
 router.post("/createCourse", (req, res) => {
+  console.log(req.query);
+  console.log('got to createCourse API.')
   let name = req.query.name;
   let sem = req.query.semester;
   let dept = req.query.dept;
@@ -170,6 +171,21 @@ router.get("/courseByAdminID", (req, res) => {
     res.json(result);
   });
 });
+
+router.get("/courseByStudentID", (req, res) => {
+  let ucid = req.query.UCID;
+console.log("Called")
+  let query = `
+  SELECT * FROM GRADE WHERE S_UCID=${ucid};
+  `;
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    // output parsing
+    console.log(result);
+    res.json(result);
+  });
+});
+
 //endpoint 8
 router.delete("/deleteCourse", (req, res) => {
   let name = req.query.name;

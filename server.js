@@ -1,6 +1,6 @@
 const express = require("express");
+const local = require('./localuser.json');
 const app = express();
-const port = 5000;
 const CourseAPI = require('./API/course');
 const StudentAPI = require('./API/student');
 const ScheduleAPI = require('./API/schedule');
@@ -23,11 +23,13 @@ app.use('/admin',AdminAPI);
 
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}
 
-app.listen(port, () => {
-console.log(`server started on ${port}`);
+
+
+
+
+
+app.listen(local.port, () => {
+console.log(`server started on ${local.port}`);
 });
-
-
-
 
 module.exports = app;

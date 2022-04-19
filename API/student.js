@@ -22,6 +22,47 @@ router.get("/checkLogin", (req, res) => {
   });
 });
 
+
+
+
+router.get('/studentInfo',(req,res)=>{
+
+  let ucid = req.query.UCID;
+
+  let query = `SELECT COUNT(*) as appears FROM MINORS_IN WHERE UCID = ${ucid} `
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    else return res.json(result);
+  });
+});
+
+router.get('/studentInfomm',(req,res)=>{
+
+  let ucid = req.query.UCID;
+
+  let query = `SELECT STUDENT.UCID, MAJORS_IN.Program as Major, MINORS_IN.Program as Minor, MINORS_IN.Year_program as Minor_year, MAJORS_IN.Year_program as Major_year FROM (STUDENT JOIN MAJORS_IN ON STUDENT.UCID= MAJORS_IN.UCID) JOIN MINORS_IN ON STUDENT.UCID = MINORS_IN.UCID WHERE STUDENT.UCID= ${ucid} `
+  console.log(query);
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    else {
+      console.log(result);
+      return res.json(result);
+    }
+  });
+});
+
+router.get('/studentInfom',(req,res)=>{
+
+  let ucid = req.query.UCID;
+
+  let query = `SELECT STUDENT.UCID, MAJORS_IN.Program as Major, MAJORS_IN.Year_program as Major_year FROM (STUDENT JOIN MAJORS_IN ON STUDENT.UCID= MAJORS_IN.UCID)`
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    else return res.json(result);
+  });
+});
+
+
 // endpoint 3
 // http://localhost:5001/student/createStudent?First_name=Sam&Last_name=Fam&date=06262001&Address=119 Doulgasview Rd SE&Postalcode=T8M9V6&City=Calgary&Province=AB&Country=Canada&UCID=30090275&Phone_number=403-975-4511&pass=pa55word&Program=Bachelor of Science&Minor=&Dept_name=Psychology&Year_of_program=3&Year_of_minor&minor_dept
 router.post("/createStudent", (req, res) => {

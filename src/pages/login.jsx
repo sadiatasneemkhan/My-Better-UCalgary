@@ -1,9 +1,7 @@
-import React, {  useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import LoginHeader2 from "../components/loginHeader2";
 import axios from "axios";
 import l from "../styles/login.module.css";
-
-
 
 // makes it so that the API is not called the moment the page is rendered
 const useDidMountEffect = (fetcher) => {
@@ -29,10 +27,10 @@ export default function Login(props) {
     console.log(data);
     if (data.account === "ERROR") {
       alert("The username or Password entered was not correct");
-    } else if (data.account === "Admin") {
-      document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
-    } else if (data.account === "Student") {
-      document.location.href = `${window.location.origin}/student/?ucid=${user}`;
+    } else if (data.account == "Admin") {
+      document.location.href = `${window.location.origin}/admin?UCID=${user}`;
+    } else if (data.account == "Student") {
+      document.location.href = `${window.location.origin}/student?UCID=${user}`;
     }
   }
 
@@ -41,7 +39,18 @@ export default function Login(props) {
     fetcher();
   };
 
+  const useDidMountEffect = (fetcher) => {
 
+    const didMount = useRef(false);
+
+    useEffect(() => {
+        if(didMount.current)
+      fetcher();
+      else{
+          didMount.current = true;
+      }
+    }, []);
+  };
 
   return (
     <React.Fragment>

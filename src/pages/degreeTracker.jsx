@@ -64,9 +64,9 @@ function DegreeTracker() {
       <h1>DEGREE TRACKER</h1>
       <Test />
 
-      <h2 className={dt.left_jus}>COURSES COMPLETED</h2>
-    </React.Fragment>
-  );
+            <h2 className={`${dt.left_jus} ${dt.course_comp}`}>COURSES COMPLETED</h2>
+        </React.Fragment>
+    );
 }
 
 export default DegreeTracker;

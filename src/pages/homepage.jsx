@@ -8,11 +8,12 @@ export default function Homepage (props) {
         <React.Fragment> 
             <LoginHeader/>
             <div className={h.body}>
+                <div className={h.logo}>
+                    <img src="../../images/h-logo-white.png" />
+                </div>
                 <div className={h.welcome}>Welcome to MyBetterUCalgary</div>
                 <div className={h.message}>Press login to begin</div>
-                <div className={h.logo}>
-                <img src="../../images/vertical-logo.png" />
-                </div>
+          
             </div>
         </React.Fragment>
     );

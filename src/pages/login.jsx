@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, {  useState, useEffect, useRef } from "react";
-=======
-import React, { useState, useEffect, useRef } from "react";
->>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
 import LoginHeader2 from "../components/loginHeader2";
 import axios from "axios";
 import l from "../styles/login.module.css";
@@ -29,19 +25,12 @@ export default function Login(props) {
     const url = `http://localhost:5001/student/checklogin?UCID=${user}&password=${pass}`;
     const { data } = await axios.get(url);
     console.log(data);
-    if (data.account === "ERROR") {
+    if (data.account == "ERROR") {
       alert("The username or Password entered was not correct");
-<<<<<<< HEAD
-    } else if (data.account === "Admin") {
-      document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
-    } else if (data.account === "Student") {
-      document.location.href = `${window.location.origin}/student/?ucid=${user}`;
-=======
     } else if (data.account == "Admin") {
-      document.location.href = `${window.location.origin}/admin`;
+      document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
     } else if (data.account == "Student") {
-      document.location.href = `${window.location.origin}/student`;
->>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
+      document.location.href = `${window.location.origin}/student/?ucid=${user}`;
     }
   }
 
@@ -50,9 +39,6 @@ export default function Login(props) {
     fetcher();
   };
 
-<<<<<<< HEAD
-
-=======
   const useDidMountEffect = (fetcher) => {
 
     const didMount = useRef(false);
@@ -65,7 +51,6 @@ export default function Login(props) {
       }
     }, []);
   };
->>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
 
   return (
     <React.Fragment>

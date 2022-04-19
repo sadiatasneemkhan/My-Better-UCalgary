@@ -14,7 +14,7 @@ h1 {
     /* rounded box */
     width: 500px;
     height: 350px;
-    background: #e74747;
+    background: rgb(233, 206, 85);
     border-radius: 40px;
   }
   

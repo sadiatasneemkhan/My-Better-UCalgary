@@ -112,8 +112,6 @@ function AddCourse() {
               placeholder="Ex. CPSC 471"
               required
             />
-          </div>
-          <div className={ac.textfield}>
             <input
               className={ac.center_block}
               type="text"
@@ -122,6 +120,7 @@ function AddCourse() {
               required
             />
           </div>
+
           <div className={ac.labels}>
             <label>Semester</label>
           </div>
@@ -146,13 +145,11 @@ function AddCourse() {
               onChange={(e) => setDes(e.target.value)}
               required
             />
-          </div>
-          <div className={ac.textfield}>
             <input
               className={ac.center_block}
               type="text"
               onChange={(e) => setStat(e.target.value)}
-              placeholder="ongoing/completed"
+              placeholder="Ongoing, Completed or Future"
               required
             />
           </div>
@@ -218,22 +215,16 @@ function AddCourse() {
           </div>
 
           <div className={ac.labels}>
-            <label>Number of Enrolled Students</label>
+            <label>Class Size and Capacity</label>
           </div>
           <div className={ac.textfield}>
             <input
               className={ac.center_block}
               type="text"
               onChange={(e) => setEnrolled(e.target.value)}
-              placeholder="0 - Max Capacity"
+              placeholder="Number of Enrolled Students"
               required
             />
-          </div>
-
-          <div className={ac.labels}>
-            <label>Max Capacity</label>
-          </div>
-          <div className={ac.textfield}>
             <input
               className={ac.center_block}
               type="text"

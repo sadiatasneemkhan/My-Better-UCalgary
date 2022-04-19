@@ -1,49 +1,11 @@
+<<<<<<< HEAD
 import React, {  useState, useEffect, useRef } from "react";
+=======
+import React, { useState, useEffect, useRef } from "react";
+>>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
 import LoginHeader2 from "../components/loginHeader2";
 import axios from "axios";
 import l from "../styles/login.module.css";
-
-<<<<<<< HEAD
-export default function Login (props) {
-    return (
-        <React.Fragment> 
-            <LoginHeader2/>
-            <div className={l.loginbox}>
-                <h1>LOGIN</h1>
-                
-                <form method="post">
-                    <div className={l.textfield}>
-                    <input className={l.center_block} type="text" placeholder="UCID" required />
-                    </div>
-
-                    <div className={l.textfield}>
-                    <input
-                        className={l.center_block}
-                        type="password"
-                        placeholder="Password"
-                        required
-                    />
-                    </div>
-
-                    <div className={l.loginfield}>
-                    <input className={l.center_block} type="submit" value="Login" />
-                    </div>
-
-                    <div className={l.forgotpass}>Forgot password?</div>
-                    <div className={l.createacc}>
-                    Not registered yet? <a href="registration">Create an account </a>
-                    </div>
-                </form>
-
-                <img src="../images/loginuser.png" className={l.usericon} />
-                <img src="../images/loginpassword.png" className={l.passicon} />
-                <img src="../images/login.png" className={l.loginicon} />
-            </div>
-        </React.Fragment>
-    ); 
-}
-=======
-
 
 // makes it so that the API is not called the moment the page is rendered
 const useDidMountEffect = (fetcher) => {
@@ -69,10 +31,17 @@ export default function Login(props) {
     console.log(data);
     if (data.account === "ERROR") {
       alert("The username or Password entered was not correct");
+<<<<<<< HEAD
     } else if (data.account === "Admin") {
       document.location.href = `${window.location.origin}/admin/?ucid=${user}`;
     } else if (data.account === "Student") {
       document.location.href = `${window.location.origin}/student/?ucid=${user}`;
+=======
+    } else if (data.account == "Admin") {
+      document.location.href = `${window.location.origin}/admin`;
+    } else if (data.account == "Student") {
+      document.location.href = `${window.location.origin}/student`;
+>>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
     }
   }
 
@@ -81,7 +50,22 @@ export default function Login(props) {
     fetcher();
   };
 
+<<<<<<< HEAD
 
+=======
+  const useDidMountEffect = (fetcher) => {
+
+    const didMount = useRef(false);
+
+    useEffect(() => {
+        if(didMount.current)
+      fetcher();
+      else{
+          didMount.current = true;
+      }
+    }, []);
+  };
+>>>>>>> 9103e7ccfddbc766e1fb744249791335fbb9ac75
 
   return (
     <React.Fragment>
@@ -128,4 +112,3 @@ export default function Login(props) {
     </React.Fragment>
   );
 }
->>>>>>> Sam

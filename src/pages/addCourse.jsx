@@ -1,23 +1,21 @@
 import React, { useEffect, useState, useRef } from "react";
 import AdminDashboard from "../components/adminDashboard";
 import ac from "../styles/addCourse.module.css";
-import axios from 'axios';
-import {  useParams } from "react-router-dom";
-
+import axios from "axios";
 
 
 function AddCourse() {
-    let ucid;
-    let i = new URLSearchParams(window.location.href.split('?')[1]);
-i.forEach((para)=>{
+  let ucid;
+  let i = new URLSearchParams(window.location.href.split("?")[1]);
+  i.forEach((para) => {
     ucid = para;
-});
+  });
 
-  const [name, setName] = useState("");
+  const [Name, setName] = useState("");
   const [sem, setSem] = useState("");
   const [stat, setStat] = useState("");
-  const [dep, setDep] = useState("")
-  const [desc, setDesc] = useState("");
+  const [dep, setDep] = useState("");
+  const [des, setDes] = useState("");
   const [ilName, setIlName] = useState("");
   const [ifName, setIfName] = useState("");
   const [build, setBuild] = useState("");
@@ -26,39 +24,74 @@ i.forEach((para)=>{
   const [time, setTime] = useState("");
   const [enrolled, setEnrolled] = useState("");
   const [capacity, setCapacity] = useState("");
-  
-  const useDidMountEffect = (fetcher) => {
 
+  const useDidMountEffect = (fetcher) => {
     const didMount = useRef(false);
 
     useEffect(() => {
-        if(didMount.current)
-      fetcher();
-      else{
-          didMount.current = true;
+      if (didMount.current) fetcher();
+      else {
+        didMount.current = true;
       }
     }, []);
   };
-  
-  async function fetcher(){
-console.log("ran fetcher")
-    const url = `http://localhost:5001/course/createCourse/name=${name}&semester=${sem}&dept=${dep}&First_name=${ilName}&Last_name=${ifName}&desc=${desc}&status=${stat}&building=${build}&room_num=${roomNum}&day=${day}&time=${time}&Classsize=${enrolled}&cap=${capacity}&Ucid=${ucid}`;
-     const {data} = await axios.post(url); 
-     console.log(data)
-    if(data !== null){
-        document.location.href = `${window.location.origin}/admin/?ucid=${ucid}`;
-        alert(`Course: ${name} has been added.`)
-    }else{
-        alert(`An error has orrcurred while adding course: ${name}`);
-    }
 
-}
+  async function fetcher() {
+    console.log("ran fetcher");
+
+    let post = {
+      name: Name,
+      semester: sem,
+      dept: dep,
+      First_name: ifName,
+      Last_name: ilName,
+      desc: des,
+      status: stat,
+      building: build,
+      room_num: roomNum,
+      day: day,
+      time: time,
+      Classsize: enrolled,
+      cap: capacity,
+      Ucid: ucid,
+    };
+    var bool = Boolean(
+      post.name.length <= 8 &&
+        post.name.length <= 11 &&
+        post.desc.length < 255 &&
+        post.First_name.length < 255 &&
+        post.Last_name.length < 255 &&
+        post.desc.length < 255 &&
+        (post.status === "ongoing" || post.status === "completed") &&
+        !isNaN(post.Classsize) &&
+        !isNaN(post.cap) &&
+        !isNaN(post.Ucid) &&
+        post.day.length < 255 &&
+        post.time.length < 255 &&
+        post.Classsize < post.cap
+    );
+    const url = `http://localhost:5001/course/createCourse`;
+    if (bool) {
+      const { data } = await axios.post(url, null, {
+        params: post,
+      });
+
+      //await axios.post(url,qs.stringify(post));
+      if (data !== null) {
+        document.location.href = `${window.location.origin}/admin/?ucid=${ucid}`;
+        alert(`Course: ${Name} has been added.`);
+      } else {
+        alert(`An error has orrcurred while adding course: ${Name}`);
+      }
+    } else {
+      alert(`There was a error in your inputs.`);
+    }
+  }
 
   const submission = (evt) => {
     evt.preventDefault();
     fetcher();
-}
-
+  };
 
   return (
     <React.Fragment>
@@ -110,7 +143,7 @@ console.log("ran fetcher")
               className={ac.center_block}
               type="text"
               placeholder="Description"
-              onChange={(e) => setDesc(e.target.value)}
+              onChange={(e) => setDes(e.target.value)}
               required
             />
           </div>

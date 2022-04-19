@@ -23,6 +23,11 @@ app.use('/admin',AdminAPI);
 
 // localhost:5000/student/checklogin?UCID=30098787?password=test2 -> {validity: true}
 
+
+
+
+
+
 app.listen(local.port, () => {
 console.log(`server started on ${local.port}`);
 });

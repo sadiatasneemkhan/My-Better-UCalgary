@@ -171,6 +171,21 @@ router.get("/courseByAdminID", (req, res) => {
     res.json(result);
   });
 });
+
+router.get("/courseByStudentID", (req, res) => {
+  let ucid = req.query.UCID;
+console.log("Called")
+  let query = `
+  SELECT * FROM GRADE WHERE S_UCID=${ucid};
+  `;
+  db.query(query, (err, result) => {
+    if (err) throw err;
+    // output parsing
+    console.log(result);
+    res.json(result);
+  });
+});
+
 //endpoint 8
 router.delete("/deleteCourse", (req, res) => {
   let name = req.query.name;

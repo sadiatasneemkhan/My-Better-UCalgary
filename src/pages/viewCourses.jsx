@@ -36,13 +36,17 @@ function ViewCourses() {
                         <td className={vc.filterable_cell}>Ongoing</td>
                         </tr>
                     </table>
-                <div className={vc.in}>
-                    <input type="number"/>
-                    <span 
-                        id="search" 
-                        onclick="SearchStudentGrades()" 
-                        className={`${vc.btn} ${vc.btn_outline_light}`}>
-                        Search Course(s)</span>
+                
+                    <div className={vc.textfield}>
+                        <input 
+                            className={vc.center_block} 
+                            type="text" 
+                            placeholder="Ex. CPSC 471" 
+                            required />
+                    </div>
+                
+                <div className={vc.button}>
+                    <input className={vc.center_block} type="submit" value="Search Course(s)" />
                 </div>
             </div>
         </React.Fragment>

@@ -16,29 +16,26 @@ const useDidMountEffect = (fetcher) => {
     }, []);
   };
 
-  function isEmpty(obj) {
-    for(var prop in obj) {
-      if(Object.prototype.hasOwnProperty.call(obj, prop)) {
-        return false;
-      }
-    }
-  
-    return JSON.stringify(obj) === JSON.stringify({});
-  }
 
 function RemoveCourse() {
-   
+    let UCID;
+    let i = new URLSearchParams(window.location.href.split("?")[1]);
+    i.forEach((para) => {
+      UCID = para;
+    });
       async function fetcher() {
 
         var del = {
             name: name,
             semester: sem,
-            Id: '12345678'
+            Id: UCID
         };
 
         const url = `http://localhost:5001/course/deleteCourse`;
-        await axios.delete(url,{headers: { 'Content-Type': 'application/json'},data: del});   
-            document.location.href = `${window.location.origin}/admin/?ucid=${del.Id}`;
+        const {data} = await axios.delete(url,{headers: { 'Content-Type': 'application/json'},data: del});   
+        console.log(data); 
+         
+        //document.location.href = `${window.location.origin}/admin/?ucid=${del.Id}`;
         alert(`Course: ${del.name} has been Deleted.`);
         }
       

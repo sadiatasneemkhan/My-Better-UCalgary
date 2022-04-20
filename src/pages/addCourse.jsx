@@ -66,7 +66,7 @@ function AddCourse() {
         !isNaN(post.Classsize) &&
         !isNaN(post.cap) &&
         !isNaN(post.Ucid) &&
-        post.day.length < 255 &&
+        post.day.length < 255 &
         post.time.length < 255 &&
         post.Classsize < post.cap
     );

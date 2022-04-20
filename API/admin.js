@@ -62,30 +62,38 @@ router.get("/getadmins", (req, res) => {
   let query = `SELECT * FROM ACCOUNT`;
   db.query(query, (err, result) => {
     if (err) throw err;
-    else return res.json(result);
+    else return res.send(result);
   });
 });
 
+//http://localhost:5001/admin/addGrade?Adminid=12345678&Sid=30098787&Course_name=CPSC 471&Sem=Winter 2022&Lgrade=A-&Pgrade=88
 router.post('/addGrade',(req,res) => {
   let sysUCID = req.query.Adminid;
-let sUCID = req.query.Sid;
-let course = req.query.Course_name;
-let Course_sem = req.query.Sem;
-let letter = req.query.Lgrade;
-let percent = req.query.Pgrade;
-let t_id = req.query.t_id;
+  let sUCID = req.query.Sid;
+  let course = req.query.Course_name;
+  let Course_sem = req.query.Sem;
+  let letter = req.query.Lgrade;
+  let percent = req.query.Pgrade;
+  let t_id = 0;
 
+  let query0 = `SELECT TRANSCRIPT.T_ID FROM (TRANSCRIPT JOIN STUDENT ON TRANSCRIPT.S_UCID = STUDENT.UCID) 
+  WHERE UCID = ${sUCID}`;
+  db.query(query0, (err, result) => {
+    if (err) throw err;
+    var str = JSON.stringify(result[0]);
+    str = str.replace(/[^\d.-]/g, '');
+    t_id = str;
 
+    if (t_id !== 0){
 
-let query = `INSERT INTO GRADE
-VALUES
-(${sUCID}, '${course}', '${Course_sem}',${percent}, '${letter}', ${t_id}, ${sysUCID})`
+      let query = `INSERT INTO GRADE VALUES(${sUCID}, '${course}', '${Course_sem}',${percent}, '${letter}', ${t_id}, ${sysUCID})`
 
-db.query(query, (err) => {
-  if (err) throw err;
-  else return res.send({'UCID': sysUCID});
+      db.query(query, (err) => {
+        if (err) throw err;
+        else return res.send({'UCID': sysUCID});
+      });
+    }
+  }); 
 });
-});
-
 
 module.exports = router;

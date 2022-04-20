@@ -201,7 +201,7 @@ router.delete("/deleteCourse", (req, res) => {
       return res.status(400).send('Nothing was deleted');
     }
     console.log("Course Deleted...");
-  return res.json(result);
+  return res.json({UCID : req.query.UCID});
     
   });
 });

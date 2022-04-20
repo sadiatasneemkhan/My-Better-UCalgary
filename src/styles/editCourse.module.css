@@ -42,6 +42,7 @@
   
   .same_row input {
     width: 47%;
+    margin: 0 5px;
   }
   
   .center_block {

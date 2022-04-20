@@ -18,17 +18,12 @@ function ViewCourses() {
 
                         </tr>
                         <tr>
-                            <td className={vc.filterable_cell}>ENSF 480</td>
-                            <td className={vc.filterable_cell}>Fall 2019</td>
-                            <td className={vc.filterable_cell}>Huffington</td>
+                            <td className={vc.filterable_cell}>CPSC 457</td>
+                            <td className={vc.filterable_cell}>Fall 2021</td>
+                            <td className={vc.filterable_cell}>Federl</td>
                             <td className={vc.filterable_cell}>Completed</td>
                         </tr>
-                        <tr>
-                        <td className={vc.filterable_cell}>ENSF 409</td>
-                        <td className={vc.filterable_cell}>Spring 2020</td>
-                        <td className={vc.filterable_cell}>Terster</td>
-                        <td className={vc.filterable_cell}>Completed</td>
-                        </tr>
+                
                         <tr>
                         <td className={vc.filterable_cell}>CPSC 471</td>
                         <td className={vc.filterable_cell}>Winter 2022</td>

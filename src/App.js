@@ -18,6 +18,7 @@ import ViewGrade from './pages/viewGrade';
 import AddGrade from './pages/addGrade';
 import Transcript from './pages/transcript';
 import Calculator from './pages/calculator';
+import Schedule from './pages/schedule';
 import EnrollCourse from './pages/enrollCourse';
 import DropCourse from './pages/dropCourse';
 import DegreeTracker from './pages/degreeTracker';
@@ -49,6 +50,7 @@ export default function App (){
 
         <Route path="/student/transcript" exact component={Transcript}/>
         <Route path="/student/calculator" exact component={Calculator}/>
+        <Route path="/student/schedule" exact component={Schedule}/>
         <Route path="/student/enrollCourse" exact component={EnrollCourse}/>
         <Route path="/student/dropCourse" exact component={DropCourse}/>
         <Route path="/student/degreeTracker" exact component={DegreeTracker}/>

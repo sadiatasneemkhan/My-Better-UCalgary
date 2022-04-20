@@ -1,72 +1,25 @@
-import React, { useState, useEffect } from "react";
-import StudentDashboard from "../components/studentDashboard";
-import dt from "../styles/degreeTracker.module.css";
-import axios from "axios";
+import React from "react";
+import StudentDashboard from '../components/studentDashboard';
+import dt from '../styles/degreeTracker.module.css'
+
 function DegreeTracker() {
-    let id;
-    let i = new URLSearchParams(window.location.href.split("?")[1]);
-    i.forEach((para) => {
-      id = para;
-    });
-// data is in this variable 
-  const [courses, setCourses] = useState([
-    {
-      UCID: 0,
-      Major: "",
-      Minor: "",
-      Major_year: 0,
-      Minor_year: 0,
-    }
-  ]);
-  var url;
-  async function fetcher() {
-    const findIfMinorURL = `http://localhost:5001/student/studentInfo?UCID=${id}`;
-    const whichUrl = await axios.get(findIfMinorURL);
-    const check = whichUrl.data;
-   
-    if (check[0].appears == 1) {
-      url = `http://localhost:5001/student/studentInfomm?UCID=${id}`;
-    } else {
-      url = `http://localhost:5001/student/studentInfom?UCID=${id}`;
-    }
-    //const studentInfo = await axios.get();
-    const course = await axios.get(url);
-    setCourses(course.data);
-    
-  }
+    return (  
+        <React.Fragment>
+            <StudentDashboard/>
 
-  useEffect(() => {
-    fetcher();
-  }, []);
+            <h1>DEGREE TRACKER</h1>
 
-  console.log(courses);
-  function Test() {
-    console.log(courses);
-    
-    return courses.map((c) => (
-        
-      <React.Fragment key={c.UCID}>
-        <h2 className={dt.left_jus}>DEGREE(S)</h2>
-        
-        <div className={`${dt.major} ${dt.txt}`}>
-          Major: <p>{c.Major}</p>
-        </div>
-        <div className={`${dt.yop} ${dt.txt}`}>
-          Year of Program: {c.Major_year}
-        </div>
-      </React.Fragment>
-    ));
-  }
-  return (
-    <React.Fragment>
-      <StudentDashboard />
+            <h2 className={dt.left_jus}>DEGREE(S)</h2>
+            <div className={`${dt.text} ${dt.left_jus}`}>
+            <div className={`${dt.major} ${dt.txt}`}>Major:</div>
+            <div className={`${dt.yop} ${dt.txt}`}>Year of Program:</div>
+            <div className={`${dt.minor} ${dt.txt}`}>Minor:</div>
+            <div className={`${dt.yop} ${dt.txt}`}>Year of Program:</div>
+            </div>
 
-      <h1>DEGREE TRACKER</h1>
-      <Test />
-
-      <h2 className={dt.left_jus}>COURSES COMPLETED</h2>
-    </React.Fragment>
-  );
+            <h2 className={dt.left_jus}>COURSES COMPLETED</h2>
+        </React.Fragment>
+    );
 }
 
 export default DegreeTracker;

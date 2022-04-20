@@ -3,23 +3,28 @@ h1 {
     padding: 15px 0 20px 0;
     color: black;
     position: relative;
-    top: -140px;
+    top: -40px;
   }
   
   h2 {
     padding: 15px 0 60px 0;
     color: black;
     position: relative;
-    top: -100px;
+    top: -50px;
     position: relative;
     left: 250px;
     font-size: 20px;
+  }
+
+  .course_comp {
+    position: relative;
+    top: -105px;
   }
   
   .text {
     color: black;
     position: relative;
-    top: -130px;
+    top: -110px;
     position: relative;
     left: 250px;
     font-size: 16px;

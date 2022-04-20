@@ -56,13 +56,13 @@ function AddCourse() {
       Ucid: ucid,
     };
     var bool = Boolean(
-      post.name.length <= 8 &&
-        post.name.length <= 11 &&
+        post.name.length <= 9 &&
+        post.semester.length <= 11 &&
         post.desc.length < 255 &&
         post.First_name.length < 255 &&
         post.Last_name.length < 255 &&
         post.desc.length < 255 &&
-        (post.status === "ongoing" || post.status === "completed") &&
+        (post.status === "Ongoing" || post.status === "Completed" || post.status === "Future") &&
         !isNaN(post.Classsize) &&
         !isNaN(post.cap) &&
         !isNaN(post.Ucid) &&
@@ -161,14 +161,14 @@ function AddCourse() {
               className={ac.center_block}
               type="text"
               placeholder="First Name"
-              onChange={(e) => setIlName(e.target.value)}
+              onChange={(e) => setIfName(e.target.value)}
               required
             />
             <input
               className={ac.center_block}
               type="text"
               placeholder="Last Name"
-              onChange={(e) => setIfName(e.target.value)}
+              onChange={(e) => setIlName(e.target.value)}
               required
             />
           </div>

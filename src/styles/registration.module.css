@@ -1,13 +1,15 @@
 .header {
     text-align: center;
     position: relative;
-    top: 30px;
+    top: -50px;
     margin: 50px 0;
     padding: 15px 0 20px 0;
     color: black;
   }
   
   .button {
+    position: relative;
+    top: -70px;
     display: inline-flexbox;
     border-radius: 90px;
     border: none;

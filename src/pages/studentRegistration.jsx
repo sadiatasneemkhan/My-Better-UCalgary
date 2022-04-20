@@ -177,7 +177,7 @@ export default function StudentRegistration (props) {
                     className={sr.center_block} 
                     type="text" 
                     onChange={(e) => setProvince(e.target.value)}
-                    placeholder="Province/State Ex. AB" 
+                    placeholder="Province/State (Ex. AB)" 
                     required />
                 <input 
                     className={sr.center_block} 

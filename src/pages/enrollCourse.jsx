@@ -4,9 +4,14 @@ import erc from '../styles/enrollCourse.module.css'
 import axios from "axios";
 function EnrollCourse() {
 
+  let UCID;
+  let i = new URLSearchParams(window.location.href.split("?")[1]);
+  i.forEach((para) => {
+    UCID = para;
+  });
+
     const [name, setName] = useState("");
   const [sem, setSem] = useState("");
-    const [UCID, setUCID] = useState("30098787")
     
   async function fetcher() {
     const url = `http://localhost:5001/schedule/enroll`;

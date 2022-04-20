@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/courses", (req, res) => {
   let query = "SELECT * FROM COURSE";
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     // output parsing
     console.log(result);
     res.json(result);
@@ -46,11 +46,11 @@ router.post("/createCourse", (req, res) => {
 
 
   db.query(query2, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else console.log("Offers created...");
   });
   db.query(query3, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   });
 });
@@ -141,17 +141,17 @@ router.put("/editCourse", (req, res) => {
     `;
 let query3 = `SELECT * FROM COURSE WHERE name = '${name ? name: orgname}' AND Semester = '${sem ? sem: orgsem}';`;
   db.query(query, (err) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else console.log("Course Updated!");
   });
   if(!(name === undefined) || !(sem === undefined)){
   db.query(query2, (err) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else console.log("Offers updated!");
   });
 }
   db.query(query3, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   });
 });
@@ -165,7 +165,7 @@ router.get("/courseByAdminID", (req, res) => {
  WHERE ${ucid} = SYSTEM_ADMIN.UCID;
   `;
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     // output parsing
     console.log(result);
     res.json(result);
@@ -179,7 +179,7 @@ console.log("Called")
   SELECT * FROM GRADE WHERE S_UCID=${ucid};
   `;
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     // output parsing
     console.log(result);
     res.json(result);
@@ -191,15 +191,19 @@ router.delete("/deleteCourse", (req, res) => {
   let name = req.query.name;
   let sem = req.query.semester;
 
-  let query = `DELETE FROM COURSE 
-  WHERE name = '${name}' AND Semester = '${sem}'`;
+  let query = `DELETE FROM COURSE WHERE name = '${name}' AND Semester = '${sem}'`;
+  console.log(query);
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     // output parsing
-
+    console.log(result)
+    if(result.affectedRows < 1){
+      return res.status(400).send('Nothing was deleted');
+    }
     console.log("Course Deleted...");
+  return res.json({UCID : req.query.UCID});
+    
   });
-  return res.json({"UCID": req.query.Id})
 });
 
 module.exports = router;

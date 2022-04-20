@@ -24,7 +24,7 @@ router.post('/createadmin',(req,res) =>{
     
     let query = `INSERT INTO ACCOUNT VALUES(${UCID},'${pass}')`
     db.query(query, (err, result) => {
-      if (err) throw err;
+      if (err) console.error(err);
       test = true;
     });
     
@@ -36,7 +36,7 @@ router.post('/createadmin',(req,res) =>{
 
     let query2 = `INSERT INTO DEPARTMENT VALUES('${deptname}','${depthead}', ${UCID})`
     db.query(query2, (err, result) => {
-      if (err) throw err;
+      if (err) console.error(err);
       if(test === true){
         res.send({'UCID': UCID});
       }
@@ -53,7 +53,7 @@ router.get('/studentTid',(req,res) =>{
   let query = `SELECT TRANSCRIPT.T_ID FROM (TRANSCRIPT JOIN STUDENT ON TRANSCRIPT.S_UCID = STUDENT.UCID) 
   WHERE UCID = ${sUCID}`;
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   }); 
 });
@@ -61,8 +61,8 @@ router.get('/studentTid',(req,res) =>{
 router.get("/getadmins", (req, res) => {
   let query = `SELECT * FROM ACCOUNT`;
   db.query(query, (err, result) => {
-    if (err) throw err;
-    else return res.send(result);
+    if (err) console.error(err);
+    else return res.json(result);
   });
 });
 

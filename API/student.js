@@ -10,7 +10,7 @@ router.get("/checkLogin", (req, res) => {
   let pass = req.query.password;
   let query = `SELECT * FROM ACCOUNT WHERE UCID ='${ucid}' AND password='${pass}'`;
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     if (result.length > 0) {
         if(ucid.charAt(0) == 1){
       res.send({ account: 'Admin' });
@@ -31,7 +31,7 @@ router.get('/studentInfo',(req,res)=>{
 
   let query = `SELECT COUNT(*) as appears FROM MINORS_IN WHERE UCID = ${ucid} `
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   });
 });
@@ -43,7 +43,7 @@ router.get('/studentInfomm',(req,res)=>{
   let query = `SELECT STUDENT.UCID, MAJORS_IN.Program as Major, MINORS_IN.Program as Minor, MINORS_IN.Year_program as Minor_year, MAJORS_IN.Year_program as Major_year FROM (STUDENT JOIN MAJORS_IN ON STUDENT.UCID= MAJORS_IN.UCID) JOIN MINORS_IN ON STUDENT.UCID = MINORS_IN.UCID WHERE STUDENT.UCID= ${ucid} `
   console.log(query);
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else {
       console.log(result);
       return res.json(result);
@@ -57,7 +57,7 @@ router.get('/studentInfom',(req,res)=>{
 
   let query = `SELECT STUDENT.UCID, MAJORS_IN.Program as Major, MAJORS_IN.Year_program as Major_year FROM (STUDENT JOIN MAJORS_IN ON STUDENT.UCID= MAJORS_IN.UCID)`
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   });
 });
@@ -96,14 +96,16 @@ router.post("/createStudent", (req, res) => {
 
       // adds to account
       db.query(query, (err) => {
-        if (err) throw err;
+        if (err) console.error(err);
+  
         else {
           console.log("Account added...");
         }
       });
       // adds to student
       db.query(query2, (err) => {
-        if (err) throw err;
+        if (err) console.error(err);
+  
         else {
           console.log("Student added...");
         }
@@ -114,7 +116,8 @@ router.post("/createStudent", (req, res) => {
         VALUES(${UCID},'${dept_min}','${yom}','${min}')`;
 
         db.query(query4, (err) => {
-          if (err) throw err;
+          if (err) console.error(err);
+    
           else {
             console.log("Minor added...");
           }
@@ -123,7 +126,8 @@ router.post("/createStudent", (req, res) => {
 
       // adds to major
       db.query(query3, (err) => {
-        if (err) throw err;
+        if (err) console.error(err);
+  
         else {
           console.log("Major added...");
         }
@@ -145,7 +149,7 @@ router.get("/getGrades", (req, res) => {
 
   //generic query
   db.query(query, (err, result) => {
-    if (err) throw err;
+    if (err) console.error(err);
     else return res.json(result);
   });
 });

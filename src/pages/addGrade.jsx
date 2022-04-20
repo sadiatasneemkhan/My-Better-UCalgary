@@ -43,8 +43,8 @@ function AddGrade() {
             post.Adminid.length == 8 &&
             post.Sem.length <= 11 &&
             post.Sid.length == 8 &&
-            post.Course_name.length == 9 &&
-            post.Lgrade.length <= 2 &&
+            post.Course_name.length == 8 &&
+            post.Lgrade.length <= 3 &&
             post.Pgrade.length <= 2 
         );
 

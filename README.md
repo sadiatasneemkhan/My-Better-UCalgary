@@ -1,3 +1,7 @@
+# Description
+
+This application is our term project for CPSC 471 - Data Base Management Systems. 
+
 # Getting Started
 In order to run our software directly from your device, you must have Node.js and mySQL
 installed beforehand, along with an IDE of your choosing. You can then download the repository

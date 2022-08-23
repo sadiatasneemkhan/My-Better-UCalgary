@@ -1,6 +1,6 @@
 # Description
 
-This application is our term project for CPSC 471 - Data Base Management Systems. 
+This application is our term project for CPSC 471 - Data Base Management Systems. It is a course management system that has a SQL backend to store student and course information. For further detail, please look at the Final Report.
 
 # Getting Started
 In order to run our software directly from your device, you must have Node.js and mySQL
